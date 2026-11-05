@@ -1,0 +1,6 @@
+{
+  "name": "Nihongo Sensei",
+  "description": "A voice-first friendly AI Japanese tutor that teaches through conversational English-to-Japanese learning, real-time voice, multi-script breakdown, and deep dictionary support.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
