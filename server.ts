@@ -9,6 +9,7 @@ import {
   transcribeAudio,
   lookupWordDeep,
 } from './src/services/gemini.ts';
+import { translateLinguistically } from './src/services/translator.ts';
 
 dotenv.config();
 
@@ -42,8 +43,9 @@ async function startServer() {
 
       res.json(result);
     } catch (err: any) {
-      console.error('API /api/translate-teach error:', err);
-      res.status(500).json({ error: err.message || 'Internal teaching error' });
+      console.error('API /api/translate-teach error, using linguistic fallback:', err);
+      const fallbackResult = translateLinguistically(req.body?.englishInput || 'hello', req.body?.level || 'N5');
+      res.json(fallbackResult);
     }
   });
 
@@ -63,7 +65,7 @@ async function startServer() {
       });
 
       if (!audioBase64) {
-        res.status(502).json({ error: 'Unable to synthesize audio' });
+        res.json({ audioBase64: null, useWebSpeech: true });
         return;
       }
 

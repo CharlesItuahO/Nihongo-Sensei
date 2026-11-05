@@ -8,6 +8,7 @@ import {
   Level,
   Goal,
 } from '../types/index.ts';
+import { translateLinguistically } from '../services/translator.ts';
 
 const DEFAULT_PROFILE: LearnerProfile = {
   level: 'N5',
@@ -314,8 +315,14 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
             fallbackWebSpeech(text, speed);
           };
 
-          await audio.play();
-          return;
+          try {
+            await audio.play();
+            return;
+          } catch (playErr) {
+            console.warn('Audio play() blocked by browser policy:', playErr);
+            fallbackWebSpeech(text, speed);
+            return;
+          }
         }
       }
 
@@ -395,6 +402,8 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
       })
     );
 
+    let senseiData: any = null;
+
     try {
       // Build conversation history
       const history = (activeSession?.messages || []).slice(-4).map(m => ({
@@ -413,74 +422,50 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
         }),
       });
 
-      if (!res.ok) {
-        throw new Error('Failed to get teaching response');
+      if (res.ok) {
+        senseiData = await res.json();
       }
-
-      const data = await res.json();
-      const senseiMessage: RichMessage = {
-        id: `sensei-${Date.now()}`,
-        role: 'sensei',
-        ...data,
-        createdAt: Date.now(),
-      };
-
-      setSessions(prev =>
-        prev.map(s => {
-          if (s.id === (activeSessionId || s.id)) {
-            return {
-              ...s,
-              updatedAt: Date.now(),
-              messages: [...s.messages, senseiMessage],
-            };
-          }
-          return s;
-        })
-      );
-
-      // Auto-play audio if enabled
-      if (profile.autoPlayAudio && senseiMessage.japanese) {
-        playAudio(senseiMessage.japanese, profile.defaultSpeed, senseiMessage.id);
-      }
-    } catch (err) {
-      console.error('Failed to send message:', err);
-      // Friendly Sensei error fallback
-      const errorMsg: RichMessage = {
-        id: `sensei-${Date.now()}`,
-        role: 'sensei',
-        englishInput: trimmed,
-        japanese: 'すみません、もう一度言ってください。',
-        kana: 'すみません、もういちどいってください。',
-        romaji: 'Sumimasen, mō ichido itte kudasai.',
-        english: 'Excuse me, could you please say that once more?',
-        breakdown: [
-          { surface: 'すみません', reading: 'すみません', romaji: 'sumimasen', pos: 'phrase', meaning: 'excuse me / sorry', jlpt: 'N5' },
-          { surface: 'もう一度', reading: 'もういちど', romaji: 'mou ichido', pos: 'adverb', meaning: 'once more', jlpt: 'N5' },
-          { surface: '言ってください', reading: 'いってください', romaji: 'itte kudasai', pos: 'verb', meaning: 'please say', jlpt: 'N5' },
-        ],
-        grammarNote: '〜てください (-te kudasai) makes a polite request. もう一度 (mou ichido) means "one more time".',
-        replyJapanese: '準備ができたら、もう一度お話ししましょう！',
-        replyKana: 'じゅんびができたら、もういちどおはなししましょう！',
-        replyRomaji: 'Junbi ga dekitara, mō ichido ohanashi shimashō!',
-        replyEnglish: 'Whenever you are ready, let\'s chat again!',
-        suggestedReplies: ['Let\'s try again', 'How do you say thank you?', 'I want some water'],
-        createdAt: Date.now(),
-      };
-
-      setSessions(prev =>
-        prev.map(s => {
-          if (s.id === (activeSessionId || s.id)) {
-            return {
-              ...s,
-              messages: [...s.messages, errorMsg],
-            };
-          }
-          return s;
-        })
-      );
-    } finally {
-      setIsLoadingMessage(false);
+    } catch (netErr) {
+      console.warn('Network / API call failed, using linguistic engine fallback:', netErr);
     }
+
+    // If server didn't return data, generate with linguistic translator
+    if (!senseiData || !senseiData.japanese) {
+      senseiData = translateLinguistically(trimmed, profile.level);
+    }
+
+    const senseiMessage: RichMessage = {
+      id: `sensei-${Date.now()}`,
+      role: 'sensei',
+      ...senseiData,
+      createdAt: Date.now(),
+    };
+
+    setSessions(prev =>
+      prev.map(s => {
+        if (s.id === (activeSessionId || s.id)) {
+          return {
+            ...s,
+            updatedAt: Date.now(),
+            messages: [...s.messages, senseiMessage],
+          };
+        }
+        return s;
+      })
+    );
+
+    // Auto-play audio safely without throwing
+    if (profile.autoPlayAudio && senseiMessage.japanese) {
+      try {
+        playAudio(senseiMessage.japanese, profile.defaultSpeed, senseiMessage.id).catch(e => {
+          console.warn('Autoplay failed or blocked by browser policy:', e);
+        });
+      } catch (audioErr) {
+        console.warn('Audio play error:', audioErr);
+      }
+    }
+
+    setIsLoadingMessage(false);
   };
 
   // Word card lookup

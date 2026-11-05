@@ -4,6 +4,7 @@ dotenv.config();
 import { GoogleGenAI, Type, ThinkingLevel } from '@google/genai';
 import type { Level, Goal, RichMessage, WordCard, RubySegment } from '../types/index.ts';
 import { lookupEnglishWordInDictionaries, lookupJapaneseWordInJisho } from './dictionary.ts';
+import { translateLinguistically } from './translator.ts';
 
 // Server-side initialization with telemetry header
 const ai = new GoogleGenAI({
@@ -31,14 +32,18 @@ export async function translateAndTeach(params: {
 
   // If the learner asked about a specific English word, check dictionary first
   let dictContext = '';
-  const singleWordMatch = englishInput.trim().match(/^(?:what does\s+['"]?([a-zA-Z-]+)['"]?\s+mean|how do I say\s+['"]?([a-zA-Z-]+)['"]?|([a-zA-Z-]+))$/i);
-  const potentialWord = singleWordMatch ? (singleWordMatch[1] || singleWordMatch[2] || singleWordMatch[3]) : null;
+  try {
+    const singleWordMatch = englishInput.trim().match(/^(?:what does\s+['"]?([a-zA-Z-]+)['"]?\s+mean|how do I say\s+['"]?([a-zA-Z-]+)['"]?|([a-zA-Z-]+))$/i);
+    const potentialWord = singleWordMatch ? (singleWordMatch[1] || singleWordMatch[2] || singleWordMatch[3]) : null;
 
-  if (potentialWord && potentialWord.length > 2) {
-    const dictData = await lookupEnglishWordInDictionaries(potentialWord);
-    if (dictData.definition) {
-      dictContext = `\n[DICTIONARY ENTRY for "${potentialWord}"]: Definition: "${dictData.definition}". Part of speech: "${dictData.partOfSpeech}". Source: "${dictData.source}". Incorporate this authoritative meaning.`;
+    if (potentialWord && potentialWord.length > 2) {
+      const dictData = await lookupEnglishWordInDictionaries(potentialWord);
+      if (dictData?.definition) {
+        dictContext = `\n[DICTIONARY ENTRY for "${potentialWord}"]: Definition: "${dictData.definition}". Part of speech: "${dictData.partOfSpeech}". Source: "${dictData.source}". Incorporate this authoritative meaning.`;
+      }
     }
+  } catch (e) {
+    console.warn('Skipping dictionary pre-lookup:', e);
   }
 
   const prompt = `Learner Profile:
@@ -61,6 +66,13 @@ Perform these tasks:
 6. Provide replyJapanese: a friendly 1-2 sentence conversational reply in Japanese that responds to the learner and asks a follow-up question or suggests the next phrase.
 7. Provide replyKana, replyRomaji, replyEnglish, and replyRubySegments for the reply.
 8. Provide suggestedReplies: 2-3 natural short English phrases the learner could reply with.`;
+
+  const apiKey = process.env.GEMINI_API_KEY;
+  const hasKey = Boolean(apiKey && apiKey !== 'MY_GEMINI_API_KEY' && apiKey.length > 5);
+
+  if (!hasKey) {
+    return getSmartTeachingFallback(englishInput, level);
+  }
 
   try {
     const response = await ai.models.generateContent({
@@ -359,35 +371,8 @@ function getSmartTeachingFallback(englishInput: string, level: Level): Omit<Rich
     };
   }
 
-  // Default encouraging sentence
-  return {
-    role: 'sensei',
-    englishInput,
-    japanese: '日本語で一緒に話しましょう。',
-    kana: 'にほんごでいっしょにはなしましょう。',
-    romaji: 'Nihongo de issho ni hanashimashō.',
-    english: "Let's speak together in Japanese.",
-    rubySegments: [
-      { text: '日本語', reading: 'にほんご', isKanji: true },
-      { text: 'で', isKanji: false },
-      { text: '一緒', reading: 'いっしょ', isKanji: true },
-      { text: 'に', isKanji: false },
-      { text: '話', reading: 'はな', isKanji: true },
-      { text: 'しましょう。', isKanji: false },
-    ],
-    breakdown: [
-      { surface: '日本語', reading: 'にほんご', romaji: 'nihongo', pos: 'noun', meaning: 'Japanese language', jlpt: 'N5' },
-      { surface: 'で', reading: 'で', romaji: 'de', pos: 'particle', meaning: 'by means of / in', jlpt: 'N5' },
-      { surface: '一緒に', reading: 'いっしょに', romaji: 'issho ni', pos: 'adverb', meaning: 'together', jlpt: 'N5' },
-      { surface: '話しましょう', reading: 'はなしましょう', romaji: 'hanashimashou', pos: 'verb', meaning: "let's speak", jlpt: 'N5' },
-    ],
-    grammarNote: '〜ましょう (-mashou) is the volitional polite form: "Let\'s do [something]". で marks the medium or tool (in Japanese).',
-    replyJapanese: '今日はいかがですか？好きな食べ物や日本の行きたい場所はありますか？',
-    replyKana: 'きょうはいかがですか？すきなたべものやにほんのいきたいばしょはありますか？',
-    replyRomaji: 'Kyō wa ikaga desu ka? Suki na tabemono ya Nihon no ikitai basho wa arimasu ka?',
-    replyEnglish: 'How are you today? Do you have a favorite food or place in Japan you want to visit?',
-    suggestedReplies: ['I love ramen and sushi', 'I want to visit Tokyo and Kyoto', 'How do you say delicious?'],
-  };
+  // Universal dynamic linguistic fallback for any vocabulary word or sentence
+  return translateLinguistically(englishInput, level);
 }
 
 /**
@@ -405,6 +390,12 @@ export async function synthesizeJapaneseSpeech(params: {
   const cacheKey = `${cleanText}:${speed}:${voiceName}`;
   if (audioCache.has(cacheKey)) {
     return audioCache.get(cacheKey)!;
+  }
+
+  const apiKey = process.env.GEMINI_API_KEY;
+  const hasKey = Boolean(apiKey && apiKey !== 'MY_GEMINI_API_KEY' && apiKey.length > 5);
+  if (!hasKey) {
+    return null;
   }
 
   try {
@@ -519,6 +510,36 @@ export async function lookupWordDeep(params: {
       initialSource = jaDict.source;
       dictSummary = `Japanese Jisho entry: Reading: "${jaDict.reading}", Definitions: ${jaDict.definitions.slice(0, 3).join(', ')}, JLPT: ${jaDict.jlpt || 'N/A'}.`;
     }
+  }
+
+  const apiKey = process.env.GEMINI_API_KEY;
+  const hasKey = Boolean(apiKey && apiKey !== 'MY_GEMINI_API_KEY' && apiKey.length > 5);
+
+  if (!hasKey) {
+    const def = enDictData?.definition || jaDictData?.definitions?.[0] || 'Definition retrieved from lexicon.';
+    const pos = enDictData?.partOfSpeech || jaDictData?.pos || 'noun';
+    const reading = jaDictData?.reading || cleanWord;
+    const examples = (enDictData?.examples || []).slice(0, 2).map((ex: string) => ({
+      ja: `「${cleanWord}」の例です。`,
+      romaji: `"${cleanWord}" no rei desu.`,
+      en: ex,
+    }));
+    const conjugations = generateFallbackConjugations(cleanWord, pos);
+
+    return {
+      word: cleanWord,
+      reading,
+      romaji: cleanWord,
+      pos,
+      definition: def,
+      jlpt: (jaDictData?.jlpt as Level) || level || 'N5',
+      source: initialSource,
+      rubySegments: [{ text: cleanWord, reading, isKanji: /[\u4e00-\u9faf]/.test(cleanWord) }],
+      conjugation: conjugations,
+      examples: examples.length > 0 ? examples : [
+        { ja: `${cleanWord}を使います。`, romaji: `${cleanWord} o tsukaimasu.`, en: `Using "${cleanWord}".` },
+      ],
+    };
   }
 
   // 2. Query Gemini 3.8 Flash for deep morphological breakdown, furigana, conjugation, and examples
