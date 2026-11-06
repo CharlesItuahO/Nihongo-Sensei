@@ -30,6 +30,13 @@ export async function translateAndTeach(params: {
 }): Promise<Omit<RichMessage, 'id' | 'createdAt'>> {
   const { englishInput, level, goal, history = [] } = params;
 
+  const apiKey = process.env.GEMINI_API_KEY;
+  const hasKey = Boolean(apiKey && apiKey !== 'MY_GEMINI_API_KEY' && apiKey.length > 5);
+
+  if (!hasKey) {
+    return getSmartTeachingFallback(englishInput, level);
+  }
+
   // If the learner asked about a specific English word, check dictionary first
   let dictContext = '';
   try {
@@ -66,13 +73,6 @@ Perform these tasks:
 6. Provide replyJapanese: a friendly 1-2 sentence conversational reply in Japanese that responds to the learner and asks a follow-up question or suggests the next phrase.
 7. Provide replyKana, replyRomaji, replyEnglish, and replyRubySegments for the reply.
 8. Provide suggestedReplies: 2-3 natural short English phrases the learner could reply with.`;
-
-  const apiKey = process.env.GEMINI_API_KEY;
-  const hasKey = Boolean(apiKey && apiKey !== 'MY_GEMINI_API_KEY' && apiKey.length > 5);
-
-  if (!hasKey) {
-    return getSmartTeachingFallback(englishInput, level);
-  }
 
   try {
     const response = await ai.models.generateContent({

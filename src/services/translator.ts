@@ -1,4 +1,4 @@
-import { Level, RichMessage, WordToken, RubySegment } from '../types/index.ts';
+import type { Level, RichMessage, WordToken, RubySegment } from '../types/index.ts';
 
 export interface LexiconEntry {
   kanji: string;
@@ -1055,6 +1055,111 @@ export const LEXICON_ENTRIES: Record<string, LexiconEntry> = {
     replyEn: 'What do you love most about Japan? The anime? The food? The culture?',
     suggestedReplies: ['I love Japanese food', 'I love anime and manga', 'The beautiful culture'],
   },
+  weather: {
+    kanji: '天気',
+    kana: 'てんき',
+    romaji: 'Tenki',
+    pos: 'noun',
+    meaning: 'weather',
+    jlpt: 'N5',
+    ruby: [{ text: '天気', reading: 'てんき', isKanji: true }],
+    grammarNote: '天気 (tenki) refers to atmospheric conditions. To say "good weather", say いい天気 (ii tenki)!',
+    replyJa: 'お天気のお話ですね！今日の天気はどうですか？晴れていますか？',
+    replyKana: 'おてんきのおはなしですね！きょうのてんきはどうですか？はれていますか？',
+    replyRomaji: 'O-tenki no ohanashi desu ne! Kyō no tenki wa dō desu ka? Harete imasu ka?',
+    replyEn: 'Talking about the weather! How is the weather where you are today? Is it sunny?',
+    suggestedReplies: ['It is very sunny', 'It is raining today', 'The weather is great'],
+  },
+  today: {
+    kanji: '今日',
+    kana: 'きょう',
+    romaji: 'Kyō',
+    pos: 'noun',
+    meaning: 'today',
+    jlpt: 'N5',
+    ruby: [{ text: '今日', reading: 'きょう', isKanji: true }],
+    grammarNote: '今日 (kyō) is an irregular kanji reading (ateji). Notice how it is a single sound "kyō".',
+    replyJa: '今日一日、どんなご予定がありますか？',
+    replyKana: 'きょういちにち、どんなごよていがありますか？',
+    replyRomaji: 'Kyō ichinichi, donna go-yotei ga arimasu ka?',
+    replyEn: 'What plans do you have for today?',
+    suggestedReplies: ['I will study Japanese', 'I am going to work', 'Just relaxing at home'],
+  },
+  tomorrow: {
+    kanji: '明日',
+    kana: 'あした',
+    romaji: 'Ashita',
+    pos: 'noun',
+    meaning: 'tomorrow',
+    jlpt: 'N5',
+    ruby: [{ text: '明日', reading: 'あした', isKanji: true }],
+    grammarNote: '明日 is commonly read as あした (ashita) in daily conversation, and sometimes あす (asu) in formal news.',
+    replyJa: '明日はどんなことを楽しみにしていますか？',
+    replyKana: 'あしたはどんなことをたのしみにしていますか？',
+    replyRomaji: 'Ashita wa donna koto o tanoshimi ni shite imasu ka?',
+    replyEn: 'What are you looking forward to doing tomorrow?',
+    suggestedReplies: ['Meeting a friend', 'Studying more Japanese', 'Going shopping'],
+  },
+  yesterday: {
+    kanji: '昨日',
+    kana: 'きのう',
+    romaji: 'Kinō',
+    pos: 'noun',
+    meaning: 'yesterday',
+    jlpt: 'N5',
+    ruby: [{ text: '昨日', reading: 'きのう', isKanji: true }],
+    grammarNote: '昨日 (kinō) pairs with past tense verbs, like 食べました (ate) or 行きました (went).',
+    replyJa: '昨日は楽しく過ごせましたか？',
+    replyKana: 'きのうはたのしくすごせましたか？',
+    replyRomaji: 'Kinō wa tanoshiku sugosemashita ka?',
+    replyEn: 'Did you have a pleasant time yesterday?',
+    suggestedReplies: ['Yes, it was great!', 'I was quite busy', 'I rested all day'],
+  },
+  time: {
+    kanji: '時間',
+    kana: 'じかん',
+    romaji: 'Jikan',
+    pos: 'noun',
+    meaning: 'time / hours',
+    jlpt: 'N5',
+    ruby: [{ text: '時間', reading: 'じかん', isKanji: true }],
+    grammarNote: '時間 (jikan) means "time" in general, and also counts hours (1時間 = 1 hour).',
+    replyJa: '「今何時ですか？」と時間を尋ねる練習をしてみましょう！',
+    replyKana: '「いまなんじですか？」とじかんをたずねるれんしゅうをしてみましょう！',
+    replyRomaji: '"Ima nan-ji desu ka?" to jikan o tazuneru renshū o shite mimashō!',
+    replyEn: 'Try practicing asking the time: "Ima nan-ji desu ka?" (What time is it right now?)!',
+    suggestedReplies: ['What time is it now?', 'I do not have time', 'Time to eat lunch!'],
+  },
+  now: {
+    kanji: '今',
+    kana: 'いま',
+    romaji: 'Ima',
+    pos: 'noun',
+    meaning: 'now / right now',
+    jlpt: 'N5',
+    ruby: [{ text: '今', reading: 'いま', isKanji: true }],
+    grammarNote: '今 (ima) is placed at the beginning of questions or statements to emphasize the present moment.',
+    replyJa: '今、日本語を一生懸命練習していて素晴らしいですよ！',
+    replyKana: 'いま、にほんごをいっしょうけんめいれんしゅうしていてすばらしいですよ！',
+    replyRomaji: 'Ima, nihongo o isshōkenmei renshū shite ite subarashii desu yo!',
+    replyEn: 'Right now, your focused Japanese practice is wonderful!',
+    suggestedReplies: ['I love learning', 'What should we practice now?', 'Let\'s keep going!'],
+  },
+  computer: {
+    kanji: 'パソコン',
+    kana: 'ぱそこん',
+    romaji: 'Pasokon',
+    pos: 'noun',
+    meaning: 'computer / PC / laptop',
+    jlpt: 'N5',
+    ruby: [{ text: 'パソコン', isKanji: false }],
+    grammarNote: 'Japanese often abbreviates "personal computer" into the compact word パソコン (pasokon).',
+    replyJa: 'パソコンでのお仕事やお勉強、お疲れ様です！',
+    replyKana: 'ぱそこんでのおしごとやおべんきょう、おつかれさまです！',
+    replyRomaji: 'Pasokon de no o-shigoto ya o-benkyō, otsukaresama desu!',
+    replyEn: 'Great job working and studying on your computer!',
+    suggestedReplies: ['I am typing right now', 'I work on my laptop', 'I love technology'],
+  },
 };
 
 /**
@@ -1249,7 +1354,428 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
     };
   }
 
-  // 2. Pattern Matching: Greetings & Courtesies
+  // 2. Pattern Matching: Weather & Temperature
+  if (/(?:weather|sunny|raining|rain|cloudy|snowing|windy)/i.test(lower) || (/(hot|cold)/i.test(lower) && /(today|outside|weather)/i.test(lower))) {
+    if (/rain|raining/i.test(lower)) {
+      return {
+        role: 'sensei',
+        englishInput: trimmed,
+        japanese: '今日は雨が降っています。',
+        kana: 'きょうはあめがふっています。',
+        romaji: 'Kyō wa ame ga futte imasu.',
+        english: 'It is raining today.',
+        rubySegments: [
+          { text: '今日', reading: 'きょう', isKanji: true },
+          { text: 'は', isKanji: false },
+          { text: '雨', reading: 'あめ', isKanji: true },
+          { text: 'が', isKanji: false },
+          { text: '降', reading: 'ふ', isKanji: true },
+          { text: 'っています。', isKanji: false },
+        ],
+        breakdown: [
+          { surface: '今日', reading: 'きょう', romaji: 'kyou', pos: 'noun', meaning: 'today', jlpt: 'N5' },
+          { surface: 'は', reading: 'は', romaji: 'wa', pos: 'particle', meaning: 'topic marker', jlpt: 'N5' },
+          { surface: '雨', reading: 'あめ', romaji: 'ame', pos: 'noun', meaning: 'rain', jlpt: 'N5' },
+          { surface: 'が', reading: 'が', romaji: 'ga', pos: 'particle', meaning: 'subject marker', jlpt: 'N5' },
+          { surface: '降っています', reading: 'ふっています', romaji: 'futte imasu', pos: 'verb', meaning: 'is falling (continuous)', jlpt: 'N5' },
+        ],
+        grammarNote: 'In Japanese, precipitation "falls" (降る furu). 降っています (futte imasu) is the continuous form for "it is raining right now".',
+        replyJapanese: '雨の日は傘を忘れずに持ってお出かけくださいね！温かい飲み物でも飲みますか？',
+        replyKana: 'あめのひはかさをわすれずにもっておでかけくださいね！あたたかいのみものでものみますか？',
+        replyRomaji: 'Ame no hi wa kasa o wasurezu ni motte o-dekake kudasai ne! Atatakai nomimono demo nomimasu ka?',
+        replyEnglish: 'On rainy days, remember to take an umbrella! Would you like a warm beverage?',
+        suggestedReplies: ['Hot green tea, please', 'I like rainy days', 'Where can I buy an umbrella?'],
+      };
+    }
+    if (/hot/i.test(lower)) {
+      return {
+        role: 'sensei',
+        englishInput: trimmed,
+        japanese: '今日はとても暑いですね！',
+        kana: 'きょうはとてもあついですね！',
+        romaji: 'Kyō wa totemo atsui desu ne!',
+        english: 'It is very hot today, isn\'t it!',
+        rubySegments: [
+          { text: '今日', reading: 'きょう', isKanji: true },
+          { text: 'はとても', isKanji: false },
+          { text: '暑', reading: 'あつ', isKanji: true },
+          { text: 'いですね！', isKanji: false },
+        ],
+        breakdown: [
+          { surface: '今日', reading: 'きょう', romaji: 'kyou', pos: 'noun', meaning: 'today', jlpt: 'N5' },
+          { surface: 'とても', reading: 'とても', romaji: 'totemo', pos: 'adverb', meaning: 'very / exceedingly', jlpt: 'N5' },
+          { surface: '暑い', reading: 'あつい', romaji: 'atsui', pos: 'i-adjective', meaning: 'hot (weather/climate)', jlpt: 'N5' },
+          { surface: 'ですね', reading: 'ですね', romaji: 'desu ne', pos: 'phrase', meaning: 'isn\'t it? (seeking agreement)', jlpt: 'N5' },
+        ],
+        grammarNote: 'Kanji tip: 暑い is used for hot weather and atmosphere, while 熱い is used for hot objects or boiling food!',
+        replyJapanese: '本当に暑いですね！熱中症に気をつけて、冷たいお水を飲んでくださいね。',
+        replyKana: 'ほんとうにあついですね！ねっちゅうしょうにきをつけて、つめたいおみずをのんでくださいね。',
+        replyRomaji: 'Hontō ni atsui desu ne! Netchūshō ni ki o tsukete, tsumetai omizu o nonde kudasai ne.',
+        replyEnglish: 'It really is hot! Please take care not to overheat and drink plenty of cold water.',
+        suggestedReplies: ['Cold water, please', 'I need some ice cream', 'It is very hot'],
+      };
+    }
+    if (/cold/i.test(lower)) {
+      return {
+        role: 'sensei',
+        englishInput: trimmed,
+        japanese: '今日はとても寒いですね！',
+        kana: 'きょうはとてもさむいですね！',
+        romaji: 'Kyō wa totemo samui desu ne!',
+        english: 'It is very cold today, isn\'t it!',
+        rubySegments: [
+          { text: '今日', reading: 'きょう', isKanji: true },
+          { text: 'はとても', isKanji: false },
+          { text: '寒', reading: 'さむ', isKanji: true },
+          { text: 'いですね！', isKanji: false },
+        ],
+        breakdown: [
+          { surface: '今日', reading: 'きょう', romaji: 'kyou', pos: 'noun', meaning: 'today', jlpt: 'N5' },
+          { surface: 'とても', reading: 'とても', romaji: 'totemo', pos: 'adverb', meaning: 'very', jlpt: 'N5' },
+          { surface: '寒い', reading: 'さむい', romaji: 'samui', pos: 'i-adjective', meaning: 'cold (weather/climate)', jlpt: 'N5' },
+          { surface: 'ですね', reading: 'ですね', romaji: 'desu ne', pos: 'phrase', meaning: 'isn\'t it?', jlpt: 'N5' },
+        ],
+        grammarNote: '寒い (samui) describes chilly weather. For cold drinks or ice cubes, Japanese uses 冷たい (tsumetai).',
+        replyJapanese: '冷えますね！暖かくして風邪をひかないようにしてくださいね。温かいラーメンでも食べますか？',
+        replyKana: 'ひえますね！あたたかくしてかぜをひかないようにしてくださいね。あたたかいらーめんでもたべますか？',
+        replyRomaji: 'Hiemasu ne! Atatakaku shite kaze o hikanai yō ni shite kudasai ne. Atatakai rāmen demo tabemasu ka?',
+        replyEnglish: 'It is chilly! Please bundle up warmly so you don\'t catch a cold. Shall we eat some hot ramen?',
+        suggestedReplies: ['Hot ramen sounds great', 'Warm green tea, please', 'It is freezing today'],
+      };
+    }
+    // Default sunny / pleasant weather ("The weather is very nice today")
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '今日はとてもいい天気ですね！',
+      kana: 'きょうはとてもいいてんきですね！',
+      romaji: 'Kyō wa totemo ii tenki desu ne!',
+      english: 'The weather is very nice today, isn\'t it!',
+      rubySegments: [
+        { text: '今日', reading: 'きょう', isKanji: true },
+        { text: 'はとてもいい', isKanji: false },
+        { text: '天気', reading: 'てんき', isKanji: true },
+        { text: 'ですね！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '今日', reading: 'きょう', romaji: 'kyou', pos: 'noun', meaning: 'today', jlpt: 'N5' },
+        { surface: 'は', reading: 'は', romaji: 'wa', pos: 'particle', meaning: 'topic marker', jlpt: 'N5' },
+        { surface: 'とても', reading: 'とても', romaji: 'totemo', pos: 'adverb', meaning: 'very / nicely', jlpt: 'N5' },
+        { surface: 'いい', reading: 'いい', romaji: 'ii', pos: 'i-adjective', meaning: 'good / pleasant', jlpt: 'N5' },
+        { surface: '天気', reading: 'てんき', romaji: 'tenki', pos: 'noun', meaning: 'weather', jlpt: 'N5' },
+        { surface: 'ですね', reading: 'ですね', romaji: 'desu ne', pos: 'phrase', meaning: 'isn\'t it? (friendly agreement)', jlpt: 'N5' },
+      ],
+      grammarNote: '今日はいい天気ですね (Kyō wa ii tenki desu ne) is Japan\'s universal polite conversation starter, just like "Lovely day today!".',
+      replyJapanese: '清々しいお天気ですね！こんな日は散歩に出かけたくなりますね。どこかお出かけしますか？',
+      replyKana: 'すがすがしいおてんきですね！こんなひはさんぽにでかけたくなりますね。どこかおでかけしますか？',
+      replyRomaji: 'Sugasugashii o-tenki desu ne! Konna hi wa sampo ni dekaketaku narimasu ne. Doko ka o-dekake shimasu ka?',
+      replyEnglish: 'Such pleasant weather! On days like this, taking a walk feels wonderful. Are you heading anywhere today?',
+      suggestedReplies: ['I will go for a walk in the park', 'I am staying home', 'Going shopping downtown'],
+    };
+  }
+
+  // 3. Pattern Matching: Time Questions ("What time is it?")
+  if (/(?:what time is it|what is the time|tell me the time)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '今、何時ですか？',
+      kana: 'いま、なんじですか？',
+      romaji: 'Ima, nan-ji desu ka?',
+      english: 'What time is it right now?',
+      rubySegments: [
+        { text: '今', reading: 'いま', isKanji: true },
+        { text: '、', isKanji: false },
+        { text: '何時', reading: 'なんじ', isKanji: true },
+        { text: 'ですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '今', reading: 'いま', romaji: 'ima', pos: 'noun', meaning: 'now / right now', jlpt: 'N5' },
+        { surface: '何時', reading: 'なんじ', romaji: 'nanji', pos: 'interrogative', meaning: 'what hour / what time', jlpt: 'N5' },
+        { surface: 'ですか', reading: 'ですか', romaji: 'desu ka', pos: 'phrase', meaning: 'is it? (question)', jlpt: 'N5' },
+      ],
+      grammarNote: '時 (ji) is the hour counter: 1時 (ichi-ji), 2時 (ni-ji), 3時 (san-ji). Combine 何 (nan) + 時 (ji) to ask "what time?".',
+      replyJapanese: '時間の尋ね方はバッチリですね！例えば「午後3時です (It is 3 PM)」のように答えますよ。',
+      replyKana: 'じかんのたずねかたはばっちりですね！たとえば「ごごさんじです」のようにこたえますよ。',
+      replyRomaji: 'Jikan no tazunekata wa batchiri desu ne! Tatoeba "Gogo san-ji desu" no yō ni kotaemasu yo.',
+      replyEnglish: 'Spot-on question for asking the time! For instance, someone might reply "Gogo san-ji desu" (It is 3:00 PM).',
+      suggestedReplies: ['What time does the store open?', 'Let\'s meet at 3 o\'clock', 'Thank you!'],
+    };
+  }
+
+  // 4. Pattern Matching: Restroom & Bathroom Locations
+  if (/(?:bathroom|toilet|restroom|washroom)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'お手洗いはどこですか？',
+      kana: 'おてあらいはどこですか？',
+      romaji: 'O-tearai wa doko desu ka?',
+      english: 'Where is the restroom / bathroom?',
+      rubySegments: [
+        { text: 'お', isKanji: false },
+        { text: '手洗', reading: 'てあら', isKanji: true },
+        { text: 'いはどこですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'お手洗い', reading: 'おてあらい', romaji: 'o-tearai', pos: 'noun', meaning: 'restroom / washroom (polite)', jlpt: 'N5' },
+        { surface: 'は', reading: 'は', romaji: 'wa', pos: 'particle', meaning: 'topic marker', jlpt: 'N5' },
+        { surface: 'どこ', reading: 'どこ', romaji: 'doko', pos: 'interrogative', meaning: 'where', jlpt: 'N5' },
+        { surface: 'ですか', reading: 'ですか', romaji: 'desu ka', pos: 'phrase', meaning: 'is it? (question)', jlpt: 'N5' },
+      ],
+      grammarNote: 'お手洗い (o-tearai) is the most polite and natural word for restroom. トイレ (toire) is also very common and understood everywhere.',
+      replyJapanese: '「あちらの突き当たりを左です」と教えてもらえることが多いですよ！言ってみましょう。',
+      replyKana: '「あちらのつきあたりをひだりです」とおしえてもらえることがおおいですよ！いってみましょう。',
+      replyRomaji: '"Achira no tsukiatari o hidari desu" to oshiete moraeru koto ga ooi desu yo! Itte mimashō.',
+      replyEnglish: 'Staff will often reply: "It is at the end of the hall on the left (tsukiatari o hidari)". Practice saying it!',
+      suggestedReplies: ['Thank you very much', 'Is it on the second floor?', 'I found it!'],
+    };
+  }
+
+  // 5. Pattern Matching: Demonstrative Questions ("What is this / that?")
+  if (/(?:what is this|what's this)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'これは何ですか？',
+      kana: 'これはなんですか？',
+      romaji: 'Kore wa nan desu ka?',
+      english: 'What is this?',
+      rubySegments: [
+        { text: 'これは', isKanji: false },
+        { text: '何', reading: 'なん', isKanji: true },
+        { text: 'ですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'これ', reading: 'これ', romaji: 'kore', pos: 'demonstrative', meaning: 'this (near speaker)', jlpt: 'N5' },
+        { surface: 'は', reading: 'は', romaji: 'wa', pos: 'particle', meaning: 'topic marker', jlpt: 'N5' },
+        { surface: '何', reading: 'なん', romaji: 'nan', pos: 'interrogative', meaning: 'what', jlpt: 'N5' },
+        { surface: 'ですか', reading: 'ですか', romaji: 'desu ka', pos: 'phrase', meaning: 'is it?', jlpt: 'N5' },
+      ],
+      grammarNote: 'これ (kore) = this (near you), それ (sore) = that (near listener), あれ (are) = that over there (distant from both).',
+      replyJapanese: '旅先で見たことのない物や料理があったら、ぜひ「これは何ですか？」と聞いてみてくださいね！',
+      replyKana: 'たびさきでみたことのないものやりょうりがあったら、ぜひ「これはなんですか？」ときいてみてくださいね！',
+      replyRomaji: 'Tabisaki de mita koto no nai mono ya ryōri ga attara, zehi "Kore wa nan desu ka?" to kiite mite kudasai ne!',
+      replyEnglish: 'Whenever you encounter an unfamiliar dish or souvenir while traveling, asking "Kore wa nan desu ka?" is perfect!',
+      suggestedReplies: ['What is that over there?', 'Is it spicy?', 'Can I try this?'],
+    };
+  }
+
+  if (/(?:what is that|what's that)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'あれは何ですか？',
+      kana: 'あれはなんですか？',
+      romaji: 'Are wa nan desu ka?',
+      english: 'What is that (over there)?',
+      rubySegments: [
+        { text: 'あれは', isKanji: false },
+        { text: '何', reading: 'なん', isKanji: true },
+        { text: 'ですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'あれ', reading: 'あれ', romaji: 'are', pos: 'demonstrative', meaning: 'that (over there)', jlpt: 'N5' },
+        { surface: 'は', reading: 'は', romaji: 'wa', pos: 'particle', meaning: 'topic marker', jlpt: 'N5' },
+        { surface: '何', reading: 'なん', romaji: 'nan', pos: 'interrogative', meaning: 'what', jlpt: 'N5' },
+        { surface: 'ですか', reading: 'ですか', romaji: 'desu ka', pos: 'phrase', meaning: 'is it?', jlpt: 'N5' },
+      ],
+      grammarNote: 'あれ (are) refers to things distant from both the speaker and the listener, e.g. a monument or distant building.',
+      replyJapanese: '遠くにある物や建物を指差して「あれは何ですか？」と尋ねてみましょう！',
+      replyKana: 'とおくにあるものやたてものをゆびさして「あれはなんですか？」とたずねてみましょう！',
+      replyRomaji: 'Tōku ni aru mono ya tatemono o yubisashite "Are wa nan desu ka?" to tazunete mimashō!',
+      replyEnglish: 'Point toward a distant landmark and ask "Are wa nan desu ka?" (What is that over there?)!',
+      suggestedReplies: ['Is it a temple?', 'Is it Tokyo Tower?', 'How do we get there?'],
+    };
+  }
+
+  // 6. Pattern Matching: Meta Language ("How do you say [X] in Japanese?")
+  const howSayMatch = lower.match(/(?:how do you say|how to say)\s+['"]?([^'"]+?)['"]?\s+(?:in japanese)?/i);
+  if (howSayMatch) {
+    const rawTarget = howSayMatch[1].replace(/[?!.]/g, '').trim();
+    const entry = LEXICON_ENTRIES[rawTarget.toLowerCase()] || LEXICON_ENTRIES[rawTarget.toLowerCase().replace(/s$/, '')];
+    const targetJa = entry ? entry.kanji.replace(/[!。？?]/g, '') : englishToKatakana(rawTarget);
+    const targetKana = entry ? entry.kana.replace(/[!。？?]/g, '') : targetJa;
+    const targetRomaji = entry ? entry.romaji.replace(/[!。？?]/g, '') : rawTarget;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `「${rawTarget}」は日本語で「${targetJa}」と言います！`,
+      kana: `「${rawTarget}」はにほんごで「${targetKana}」といいます！`,
+      romaji: `"${rawTarget}" wa nihongo de "${targetRomaji}" to iimasu!`,
+      english: `"${rawTarget}" is said as "${targetJa}" in Japanese!`,
+      rubySegments: [
+        { text: `「${rawTarget}」は`, isKanji: false },
+        { text: '日本語', reading: 'にほんご', isKanji: true },
+        { text: 'で「', isKanji: false },
+        { text: targetJa, reading: targetKana, isKanji: /[\u4e00-\u9faf]/.test(targetJa) },
+        { text: '」と', isKanji: false },
+        { text: '言', reading: 'い', isKanji: true },
+        { text: 'います！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: rawTarget, reading: rawTarget, romaji: rawTarget.toLowerCase(), pos: 'English phrase', meaning: rawTarget, jlpt: 'N5' },
+        { surface: targetJa, reading: targetKana, romaji: targetRomaji.toLowerCase(), pos: entry?.pos || 'noun', meaning: rawTarget, jlpt: 'N5' },
+        { surface: 'と言います', reading: 'といいます', romaji: 'to iimasu', pos: 'verb', meaning: 'is called / is said', jlpt: 'N5' },
+      ],
+      grammarNote: '〜は日本語で何と言いますか？ (wa nihongo de nan to iimasu ka?) is your golden phrase for asking native speakers how to say anything!',
+      replyJapanese: `「${targetJa}」を使って、声に出して練習してみましょう！言えましたか？`,
+      replyKana: `「${targetKana}」をつかって、こえにだしてれんしゅうしてみましょう！いえましたか？`,
+      replyRomaji: `"${targetRomaji}" o tsukatte, koe ni dashite renshū shite mimashō! Iemashita ka?`,
+      replyEnglish: `Try speaking "${targetJa}" aloud right now! Were you able to pronounce it comfortably?`,
+      suggestedReplies: [`Yes, I said "${targetJa}"!`, 'Can you pronounce it again?', 'Teach me another word'],
+    };
+  }
+
+  // 7. Pattern Matching: Farewells & Well-wishes
+  if (/see you (tomorrow|later)|see ya/i.test(lower)) {
+    const isTomorrow = /tomorrow/i.test(lower);
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: isTomorrow ? 'また明日！' : 'また後で！',
+      kana: isTomorrow ? 'またあした！' : 'またあとで！',
+      romaji: isTomorrow ? 'Mata ashita!' : 'Mata ato de!',
+      english: isTomorrow ? 'See you tomorrow!' : 'See you later!',
+      rubySegments: [
+        { text: 'また', isKanji: false },
+        { text: isTomorrow ? '明日' : '後', reading: isTomorrow ? 'あした' : 'あと', isKanji: true },
+        { text: isTomorrow ? '！' : 'で！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'また', reading: 'また', romaji: 'mata', pos: 'adverb', meaning: 'again', jlpt: 'N5' },
+        { surface: isTomorrow ? '明日' : '後で', reading: isTomorrow ? 'あした' : 'あとで', romaji: isTomorrow ? 'ashita' : 'ato de', pos: 'noun', meaning: isTomorrow ? 'tomorrow' : 'later on', jlpt: 'N5' },
+      ],
+      grammarNote: 'また (mata) means "again". Combine it with time words: また明日 (see you tomorrow), また来週 (see you next week)!',
+      replyJapanese: 'はい！今日も素晴らしい勉強でしたね。次回も楽しみに待っています！',
+      replyKana: 'はい！きょうもすばらしいべんきょうでしたね。じかいもたのしみにまっています！',
+      replyRomaji: 'Hai! Kyō mo subarashii benkyō deshita ne. Jikai mo tanoshimi ni matte imasu!',
+      replyEnglish: 'Yes! Wonderful practice today. Looking forward to our next lesson together!',
+      suggestedReplies: ['Thank you Sensei', 'Have a good rest', 'Bye bye!'],
+    };
+  }
+
+  if (/have a (nice|good|great) day/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '良い一日を！',
+      kana: 'よいいちにちを！',
+      romaji: 'Yoi ichinichi o!',
+      english: 'Have a nice day!',
+      rubySegments: [
+        { text: '良', reading: 'よ', isKanji: true },
+        { text: 'い', isKanji: false },
+        { text: '一日', reading: 'いちにち', isKanji: true },
+        { text: 'を！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '良い', reading: 'よい', romaji: 'yoi', pos: 'i-adjective', meaning: 'good / pleasant', jlpt: 'N5' },
+        { surface: '一日', reading: 'いちにち', romaji: 'ichinichi', pos: 'noun', meaning: 'one day / whole day', jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'object particle (wishing)', jlpt: 'N5' },
+      ],
+      grammarNote: '良い一日を (Yoi ichinichi o) is short for 良い一日をお過ごしください (Please spend a wonderful day).',
+      replyJapanese: 'ありがとうございます！あなたも笑顔あふれる素敵な一日をお過ごしくださいね。',
+      replyKana: 'ありがとうございます！あなたもえがおあふれるすてきないちにちをおすごしくださいね。',
+      replyRomaji: 'Arigatō gozaimasu! Anata mo egao afureru suteki na ichinichi o o-sugoshi kudasai ne.',
+      replyEnglish: 'Thank you! Wishing you a wonderful day filled with smiles as well.',
+      suggestedReplies: ['Thank you Sensei', 'See you tomorrow', 'You too!'],
+    };
+  }
+
+  // 8. Pattern Matching: Speaking Speed & Comprehension
+  if (/(?:speak slowly|speak more slowly|slow down)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'もう少しゆっくり話していただけますか？',
+      kana: 'もうすこしゆっくりはなしていただけますか？',
+      romaji: 'Mō sukoshi yukkuri hanashite itadakemasu ka?',
+      english: 'Could you please speak a little more slowly?',
+      rubySegments: [
+        { text: 'もう', isKanji: false },
+        { text: '少', reading: 'すこ', isKanji: true },
+        { text: 'しゆっくり', isKanji: false },
+        { text: '話', reading: 'はな', isKanji: true },
+        { text: 'していただけますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'もう少し', reading: 'もうすこし', romaji: 'mou sukoshi', pos: 'adverb', meaning: 'a little more', jlpt: 'N5' },
+        { surface: 'ゆっくり', reading: 'ゆっくり', romaji: 'yukkuri', pos: 'adverb', meaning: 'slowly / unhurriedly', jlpt: 'N5' },
+        { surface: '話す', reading: 'はなす', romaji: 'hanasu', pos: 'verb', meaning: 'to speak', jlpt: 'N5' },
+        { surface: 'していただけますか', reading: 'していただけますか', romaji: 'shite itadakemasu ka', pos: 'phrase', meaning: 'could you please do for me', jlpt: 'N4' },
+      ],
+      grammarNote: 'ゆっくり (yukkuri) means slowly. Adding もう少し (a little more) + ていただけますか softens the request beautifully.',
+      replyJapanese: 'もちろんです！ゆっくり丁寧に発音しますので、何回でも聴き直してくださいね。',
+      replyKana: 'もちろんです！ゆっくりていねいにはつおんしますので、なんかいでもききなおしてくださいね。',
+      replyRomaji: 'Mochiron desu! Yukkuri teinei ni hatsuon shimasu node, nankai demo kikinaoshite kudasai ne.',
+      replyEnglish: 'Of course! I will pronounce clearly and slowly, so feel free to listen as many times as you like.',
+      suggestedReplies: ['Thank you Sensei', 'One more time please', 'I understand now!'],
+    };
+  }
+
+  if (/(?:i don't understand|i do not understand)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '分かりません。',
+      kana: 'わかりません。',
+      romaji: 'Wakarimasen.',
+      english: 'I do not understand.',
+      rubySegments: [
+        { text: '分', reading: 'わ', isKanji: true },
+        { text: 'かりません。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '分かります', reading: 'わかります', romaji: 'wakarimasu', pos: 'verb', meaning: 'to understand', jlpt: 'N5' },
+        { surface: 'ません', reading: 'ません', romaji: 'masen', pos: 'suffix', meaning: 'polite negative', jlpt: 'N5' },
+      ],
+      grammarNote: '分かりません (wakarimasen) is the polite negative of 分かります (wakarimasu). It is completely acceptable to say this honestly when learning!',
+      replyJapanese: '大丈夫ですよ！焦らずに一歩ずつ練習しましょう。どの部分をもう一度説明しましょうか？',
+      replyKana: 'だいじょうぶですよ！あせらずにいっぽずつれんしゅうしましょう。どのぶぶんをもういちどせつめいしましょうか？',
+      replyRomaji: 'Daijōbu desu yo! Aserazu ni ippo zutsu renshū shimashō. Dono bubun o mō ichido setsumei shimashō ka?',
+      replyEnglish: 'Don\'t worry at all! Step-by-step is the best way to learn. Which part would you like me to explain again?',
+      suggestedReplies: ['The vocabulary words', 'The grammar particles', 'How to pronounce it'],
+    };
+  }
+
+  // 9. Pattern Matching: Buying & Shopping ("I want to buy [item]")
+  const buyMatch = lower.match(/(?:i want to buy|can i buy|where can i buy)\s+(?:a\s+|an\s+|some\s+)?(.+)/i);
+  if (buyMatch) {
+    const rawItem = buyMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+    const itemEntry = LEXICON_ENTRIES[rawItem.toLowerCase()] || LEXICON_ENTRIES[rawItem.toLowerCase().replace(/s$/, '')];
+    const itemJa = itemEntry?.kanji.replace(/[!。？?]/g, '') || englishToKatakana(rawItem);
+    const itemKana = itemEntry?.kana.replace(/[!。？?]/g, '') || itemJa;
+    const itemRomaji = itemEntry?.romaji.replace(/[!。？?]/g, '') || rawItem;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `${itemJa}を買いたいです！`,
+      kana: `${itemKana}をかいたいです！`,
+      romaji: `${itemRomaji} o kaitai desu!`,
+      english: `I want to buy ${rawItem}!`,
+      rubySegments: [
+        ...(itemEntry?.ruby || [{ text: itemJa, isKanji: /[\u4e00-\u9faf]/.test(itemJa) }]),
+        { text: 'を', isKanji: false },
+        { text: '買', reading: 'か', isKanji: true },
+        { text: 'いたいです！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: itemJa, reading: itemKana, romaji: itemRomaji.toLowerCase(), pos: 'noun', meaning: rawItem, jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'direct object marker', jlpt: 'N5' },
+        { surface: '買いたい', reading: 'かいたい', romaji: 'kaitai', pos: 'verb', meaning: 'want to buy (-tai form of 買う)', jlpt: 'N5' },
+        { surface: 'です', reading: 'です', romaji: 'desu', pos: 'copula', meaning: 'polite auxiliary', jlpt: 'N5' },
+      ],
+      grammarNote: '買う (kau, to buy) becomes 買いたい (kaitai, want to buy). Combine with を: [Item]を買いたいです.',
+      replyJapanese: `お買い物ですね！「${itemJa}はどこに売っていますか？」と店員さんに聞いてみましょうか？`,
+      replyKana: `おかいものですね！「${itemKana}はどこにうっていますか？」とてんいんさんにきいてみましょうか？`,
+      replyRomaji: `O-kaimono desu ne! "${itemRomaji} wa doko ni utte imasu ka?" to ten'in-san ni kiite mimashō ka?`,
+      replyEnglish: `Shopping time! Shall we try asking the store clerk: "Where is ${rawItem} sold?"`,
+      suggestedReplies: ['How much does it cost?', 'Can I pay by credit card?', 'Where is the cashier?'],
+    };
+  }
+
+  // 10. Pattern Matching: Greetings & Courtesies
   if (/^(how are you|how are you doing|how is it going)/i.test(lower)) {
     return {
       role: 'sensei',
@@ -1452,10 +1978,27 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
   const wantEatMatch = lower.match(/(?:i want to eat|can i eat|let's eat|i'd like to eat)\s+(.+)/i);
   if (wantEatMatch) {
     const rawItem = wantEatMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
-    const itemEntry = LEXICON_ENTRIES[rawItem.toLowerCase()];
-    const itemJa = itemEntry?.kanji || englishToKatakana(rawItem);
-    const itemKana = itemEntry?.kana || itemJa;
-    const itemRomaji = itemEntry?.romaji || rawItem;
+    let itemJa = '';
+    let itemKana = '';
+    let itemRomaji = '';
+
+    // Handle compound items like "delicious sushi", "spicy ramen"
+    const lowerItem = rawItem.toLowerCase();
+    if (lowerItem.includes('delicious') && lowerItem.includes('sushi')) {
+      itemJa = '美味しい寿司';
+      itemKana = 'おいしいすし';
+      itemRomaji = 'oishii sushi';
+    } else if (lowerItem.includes('delicious') && lowerItem.includes('ramen')) {
+      itemJa = '美味しいラーメン';
+      itemKana = 'おいしいらーめん';
+      itemRomaji = 'oishii rāmen';
+    } else {
+      const itemEntry = LEXICON_ENTRIES[lowerItem] || LEXICON_ENTRIES[lowerItem.replace(/s$/, '')];
+      itemJa = itemEntry?.kanji || englishToKatakana(rawItem);
+      itemKana = itemEntry?.kana || itemJa;
+      itemRomaji = itemEntry?.romaji || rawItem;
+    }
+
     return {
       role: 'sensei',
       englishInput: trimmed,
@@ -1464,7 +2007,7 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
       romaji: `${itemRomaji} o tabetai desu!`,
       english: `I want to eat ${rawItem}!`,
       rubySegments: [
-        ...(itemEntry?.ruby || [{ text: itemJa, isKanji: false }]),
+        { text: itemJa, isKanji: /[\u4e00-\u9faf]/.test(itemJa) },
         { text: 'を', isKanji: false },
         { text: '食', reading: 'た', isKanji: true },
         { text: 'べたいです！', isKanji: false },
@@ -1740,107 +2283,335 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
     };
   }
 
-  // 10. Multi-word English sentence: Translate key components into natural Japanese
-  // Identify key words to translate
-  const translatedTokens: { en: string; ja: string; kana: string; romaji: string }[] = [];
-  for (const w of words) {
-    const cleanW = w.toLowerCase().replace(/[?!.,'"]/g, '');
-    if (LEXICON_ENTRIES[cleanW]) {
-      const e = LEXICON_ENTRIES[cleanW];
-      translatedTokens.push({ en: cleanW, ja: e.kanji.replace(/[!。？?]/g, ''), kana: e.kana.replace(/[!。？?]/g, ''), romaji: e.romaji.replace(/[!。？?]/g, '') });
-    }
+  // 10. Pattern Matching: Likes, Loves & Dislikes
+  const likeMatch = lower.match(/(?:i like|i love|i really like)\s+(.+)/i);
+  if (likeMatch) {
+    const rawItem = likeMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+    const itemEntry = LEXICON_ENTRIES[rawItem.toLowerCase()] || LEXICON_ENTRIES[rawItem.toLowerCase().replace(/s$/, '')];
+    const itemJa = itemEntry?.kanji || englishToKatakana(rawItem);
+    const itemKana = itemEntry?.kana || itemJa;
+    const itemRomaji = itemEntry?.romaji || rawItem;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `私は${itemJa}が好きです！`,
+      kana: `わたしは${itemKana}がすきです！`,
+      romaji: `Watashi wa ${itemRomaji} ga suki desu!`,
+      english: `I like ${rawItem}!`,
+      rubySegments: [
+        { text: '私', reading: 'わたし', isKanji: true },
+        { text: `は${itemJa}が`, isKanji: false },
+        { text: '好', reading: 'す', isKanji: true },
+        { text: 'きです！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '私', reading: 'わたし', romaji: 'watashi', pos: 'pronoun', meaning: 'I / me', jlpt: 'N5' },
+        { surface: itemJa, reading: itemKana, romaji: itemRomaji.toLowerCase(), pos: 'noun', meaning: rawItem, jlpt: 'N5' },
+        { surface: 'が好き', reading: 'がすき', romaji: 'ga suki', pos: 'na-adjective', meaning: 'fond of / like', jlpt: 'N5' },
+      ],
+      grammarNote: 'In Japanese, the thing you like is marked with the particle が (ga), not を (o): 〜が好きです (ga suki desu).',
+      replyJapanese: `${itemJa}、とても素敵ですね！どんなところが一番好きですか？`,
+      replyKana: `${itemKana}、とてもすてきですね！どんなところがいちばんすきですか？`,
+      replyRomaji: `${itemRomaji}, totemo suteki desu ne! Donna tokoro ga ichiban suki desu ka?`,
+      replyEnglish: `${rawItem} is wonderful! What do you like most about it?`,
+      suggestedReplies: [`I love everything about ${rawItem}`, 'It is very fun', 'How about you, Sensei?'],
+    };
   }
 
-  // If we found recognizable Japanese words in the sentence
-  if (translatedTokens.length > 0) {
-    const primaryWord = translatedTokens[0];
-    const isQuestion = /\?$/.test(trimmed) || /^(what|where|who|when|why|how|can|is|are|do|does)/i.test(trimmed);
-
-    const translatedSentenceJa = isQuestion
-      ? `${primaryWord.ja}について教えてくれますか？`
-      : `${primaryWord.ja}が好きで、よく使います。`;
-    const translatedSentenceKana = isQuestion
-      ? `${primaryWord.kana}についておしえてくれますか？`
-      : `${primaryWord.kana}がすきで、よくつかいます。`;
-    const translatedSentenceRomaji = isQuestion
-      ? `${primaryWord.romaji} ni tsuite oshiete kuremasu ka?`
-      : `${primaryWord.romaji} ga suki de, yoku tsukaimasu.`;
-    const translatedMeaning = isQuestion
-      ? `Could you tell me more about ${primaryWord.en}?`
-      : `I like ${primaryWord.en} and use it often.`;
+  // 11. Pattern Matching: Going / Traveling Destinations
+  const goMatch = lower.match(/(?:i am going to|i'm going to|i will go to|i want to go to|let's go to)\s+(?:the\s+)?(.+)/i);
+  if (goMatch) {
+    const rawDest = goMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+    const destEntry = LEXICON_ENTRIES[rawDest.toLowerCase()];
+    const destJa = destEntry?.kanji || englishToKatakana(rawDest);
+    const destKana = destEntry?.kana || destJa;
+    const destRomaji = destEntry?.romaji || rawDest;
+    const isWant = /want to/i.test(trimmed);
+    const isLet = /let's/i.test(trimmed);
+    const verbJa = isWant ? '行きたいです！' : isLet ? '行きましょう！' : '行きます。';
+    const verbKana = isWant ? 'いきたいです！' : isLet ? 'いきましょう！' : 'いきます。';
+    const verbRomaji = isWant ? 'ikitai desu!' : isLet ? 'ikimashō!' : 'ikimasu.';
 
     return {
       role: 'sensei',
       englishInput: trimmed,
-      japanese: translatedSentenceJa,
-      kana: translatedSentenceKana,
-      romaji: translatedSentenceRomaji,
-      english: translatedMeaning,
+      japanese: `${destJa}へ${verbJa}`,
+      kana: `${destKana}へ${verbKana}`,
+      romaji: `${destRomaji} e ${verbRomaji}`,
+      english: isWant ? `I want to go to ${rawDest}!` : isLet ? `Let's go to ${rawDest}!` : `I am going to ${rawDest}.`,
       rubySegments: [
-        { text: primaryWord.ja, isKanji: /[\u4e00-\u9faf]/.test(primaryWord.ja) },
-        { text: isQuestion ? 'について' : 'が', isKanji: false },
-        { text: isQuestion ? '教' : '好', reading: isQuestion ? 'おし' : 'す', isKanji: true },
-        { text: isQuestion ? 'えてくれますか？' : 'きで、よく', isKanji: false },
-        { text: isQuestion ? '' : '使', reading: isQuestion ? '' : 'つか', isKanji: !isQuestion },
-        { text: isQuestion ? '' : 'います。', isKanji: false },
-      ].filter(seg => seg.text.length > 0),
-      breakdown: [
-        { surface: primaryWord.ja, reading: primaryWord.kana, romaji: primaryWord.romaji.toLowerCase(), pos: 'noun', meaning: primaryWord.en, jlpt: 'N5' },
-        { surface: isQuestion ? 'について' : 'が好き', reading: isQuestion ? 'について' : 'がすき', romaji: isQuestion ? 'ni tsuite' : 'ga suki', pos: 'phrase', meaning: isQuestion ? 'regarding / about' : 'fond of / like', jlpt: 'N5' },
+        ...(destEntry?.ruby || [{ text: destJa, isKanji: false }]),
+        { text: 'へ', isKanji: false },
+        { text: '行', reading: 'い', isKanji: true },
+        { text: isWant ? 'きたいです！' : isLet ? 'きましょう！' : 'きます。', isKanji: false },
       ],
-      grammarNote: isQuestion
-        ? '〜について (ni tsuite) means "about / regarding". 〜てくれますか (te kuremasu ka) is a polite request asking someone to do something for you.'
-        : '〜が好きです (ga suki desu) expresses that you like something. In Japanese, the target of your affection takes the particle が (ga).',
-      replyJapanese: `「${trimmed}」ですね！${primaryWord.ja}についての表現をしっかり身につけましょう。次はどんなフレーズを話してみたいですか？`,
-      replyKana: `「${trimmed}」ですね！${primaryWord.kana}についてのひょうげんをしっかりみにつけましょう。つぎはどんなふれーずをはなしてみたいですか？`,
-      replyRomaji: `"${trimmed}" desu ne! ${primaryWord.romaji} ni tsuite no hyōgen o shikkari mi ni tsukemashō. Tsugi wa donna furēzu o hanashite mitai desu ka?`,
-      replyEnglish: `You said: "${trimmed}"! Let's master expressions related to ${primaryWord.en}. What phrase would you like to speak next?`,
-      suggestedReplies: [`I want to know more about ${primaryWord.en}`, 'Where can I find it?', 'How do you say it politely?'],
+      breakdown: [
+        { surface: destJa, reading: destKana, romaji: destRomaji.toLowerCase(), pos: 'noun', meaning: rawDest, jlpt: 'N5' },
+        { surface: 'へ', reading: 'え', romaji: 'e', pos: 'particle', meaning: 'direction marker (towards)', jlpt: 'N5' },
+        { surface: isWant ? '行きたい' : isLet ? '行きましょう' : '行きます', reading: verbKana.replace(/[！。]/g, ''), romaji: verbRomaji.replace(/[！。]/g, ''), pos: 'verb', meaning: isWant ? 'want to go' : isLet ? "let's go" : 'go (polite)', jlpt: 'N5' },
+      ],
+      grammarNote: 'The destination particle へ is written with the kana "he", but pronounced "e". You can also use に (ni) to indicate destinations.',
+      replyJapanese: `${destJa}に行くのはとても楽しみですね！電車で行きますか？`,
+      replyKana: `${destKana}にいくのはとてもたのしみですね！でんしゃでいきますか？`,
+      replyRomaji: `${destRomaji} ni iku no wa totemo tanoshimi desu ne! Densha de ikimasu ka?`,
+      replyEnglish: `Going to ${rawDest} sounds so exciting! Are you going by train?`,
+      suggestedReplies: ['By train, please', 'By bullet train', 'Is it far from here?'],
     };
   }
 
-  // 11. General conversational sentence translation for any other input
-  const katakanaTransliteration = words.slice(0, 3).map(w => englishToKatakana(w.replace(/[?!.,'"]/g, ''))).join('・');
-  const isQuestion = /\?$/.test(trimmed) || /^(what|where|who|when|why|how|can|is|are|do|does)/i.test(trimmed);
+  // 12. Pattern Matching: Language Learning & Abilities
+  if (/(?:learning japanese|study japanese|learn japanese|practicing japanese|practice japanese|practice conversation|studying japanese)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '日本語を勉強しています！',
+      kana: 'にほんごをべんきょうしています！',
+      romaji: 'Nihongo o benkyō shite imasu!',
+      english: 'I am studying Japanese!',
+      rubySegments: [
+        { text: '日本語', reading: 'にほんご', isKanji: true },
+        { text: 'を', isKanji: false },
+        { text: '勉強', reading: 'べんきょう', isKanji: true },
+        { text: 'しています！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '日本語', reading: 'にほんご', romaji: 'nihongo', pos: 'noun', meaning: 'Japanese language', jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'object marker', jlpt: 'N5' },
+        { surface: '勉強しています', reading: 'べんきょうしています', romaji: 'benkyou shite imasu', pos: 'verb', meaning: 'am studying (continuous)', jlpt: 'N5' },
+      ],
+      grammarNote: '〜ています (te imasu) represents an ongoing state or habit: 勉強する (to study) → 勉強しています (am studying).',
+      replyJapanese: '毎日コツコツ勉強していて素晴らしいですね！どの部分が一番面白いですか？',
+      replyKana: 'まいにちこつこつべんきょうしていてすばらしいですね！どのぶぶんがいちばんおもしろいですか？',
+      replyRomaji: 'Mainichi kotsukotsu benkyō shite ite subarashii desu ne! Dono bubun ga ichiban omoshiroi desu ka?',
+      replyEnglish: 'Your steady daily practice is wonderful! What part do you find most interesting—kanji, speaking, or vocabulary?',
+      suggestedReplies: ['Speaking conversationally', 'Learning Kanji characters', 'Watching anime without subtitles'],
+    };
+  }
 
-  const naturalJa = isQuestion
-    ? `そのことについて、日本語で質問してみましょう！`
-    : `「${trimmed}」を自然な日本語で表現してみましょう！`;
-  const naturalKana = isQuestion
-    ? `そのことについて、にほんごでしつもんしてみましょう！`
-    : `「${trimmed}」をしぜんなにほんごでひょうげんしてみましょう！`;
-  const naturalRomaji = isQuestion
-    ? `Sono koto ni tsuite, nihongo de shitsumon shite mimashō!`
-    : `"${trimmed}" o shizen na nihongo de hyōgen shite mimashō!`;
-  const naturalEnglish = isQuestion
-    ? `Let's ask that question naturally in Japanese!`
-    : `Here is how to express "${trimmed}" in natural Japanese!`;
+  // 13. Pattern Matching: Common Inquiries & Requests
+  if (/(?:can you help me|please help me|could you help)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '手伝っていただけますか？',
+      kana: 'てつだっていただけますか？',
+      romaji: 'Tetsudatte itadakemasu ka?',
+      english: 'Could you please help me?',
+      rubySegments: [
+        { text: '手伝', reading: 'てつだ', isKanji: true },
+        { text: 'っていただけますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '手伝う', reading: 'てつだう', romaji: 'tetsudau', pos: 'verb', meaning: 'to help / assist', jlpt: 'N5' },
+        { surface: 'いただけますか', reading: 'いただけますか', romaji: 'itadakemasu ka', pos: 'verb', meaning: 'could I receive (polite request)', jlpt: 'N4' },
+      ],
+      grammarNote: '〜ていただけますか (te itadakemasu ka) is an ultra-polite formula to ask for assistance or favors.',
+      replyJapanese: 'もちろんです！何でも聞いてください。喜んでお手伝いしますよ。',
+      replyKana: 'もちろんです！なんでもきいてください。よろこんでおてつだいしますよ。',
+      replyRomaji: 'Mochiron desu! Nan demo kiite kudasai. Yorokonde o-tetsudai shimasu yo.',
+      replyEnglish: 'Of course! Please ask me anything. I would be delighted to assist you.',
+      suggestedReplies: ['Where is the train station?', 'How do I say this in Japanese?', 'Can you speak slowly?'],
+    };
+  }
+
+  if (/(?:what are you doing)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '何をしていますか？',
+      kana: 'なにをしていますか？',
+      romaji: 'Nani o shite imasu ka?',
+      english: 'What are you doing?',
+      rubySegments: [
+        { text: '何', reading: 'なに', isKanji: true },
+        { text: 'をしていますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '何', reading: 'なに', romaji: 'nani', pos: 'interrogative', meaning: 'what', jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'object marker', jlpt: 'N5' },
+        { surface: 'していますか', reading: 'していますか', romaji: 'shite imasu ka', pos: 'verb', meaning: 'are you doing? (question)', jlpt: 'N5' },
+      ],
+      grammarNote: 'する (suru, to do) becomes していますか (shite imasu ka, are you doing?). 何 is pronounced "nani" before を.',
+      replyJapanese: '私はあなたと楽しく日本語でお話ししていますよ！あなたは何をしていますか？',
+      replyKana: 'わたしはあなたとたのしくにほんごでおはなししていますよ！あなたはいまなにをしていますか？',
+      replyRomaji: 'Watashi wa anata to tanoshiku nihongo de ohanashi shite imasu yo! Anata wa ima nani o shite imasu ka?',
+      replyEnglish: 'I am having a fun Japanese conversation with you! What are you doing right now?',
+      suggestedReplies: ['I am learning Japanese', 'I am relaxing at home', 'I am getting ready to travel'],
+    };
+  }
+
+  if (/(?:where do you live|where are you living)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'どこに住んでいますか？',
+      kana: 'どこにすんでいますか？',
+      romaji: 'Doko ni sunde imasu ka?',
+      english: 'Where do you live?',
+      rubySegments: [
+        { text: 'どこに', isKanji: false },
+        { text: '住', reading: 'す', isKanji: true },
+        { text: 'んでいますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'どこ', reading: 'どこ', romaji: 'doko', pos: 'interrogative', meaning: 'where', jlpt: 'N5' },
+        { surface: 'に', reading: 'に', romaji: 'ni', pos: 'particle', meaning: 'location particle', jlpt: 'N5' },
+        { surface: '住んでいますか', reading: 'すんでいますか', romaji: 'sunde imasu ka', pos: 'verb', meaning: 'are you living? (question)', jlpt: 'N5' },
+      ],
+      grammarNote: '住む (sumu, to reside) pairs with に (ni) to indicate the location where one lives: [Location]に住んでいます.',
+      replyJapanese: '私は日本の東京に住んでいますよ！あなたはどの街にお住まいですか？',
+      replyKana: 'わたしはにほんのとうきょうにすんでいますよ！あなたはどのまちにおすまいですか？',
+      replyRomaji: 'Watashi wa Nihon no Tōkyō ni sunde imasu yo! Anata wa dono machi ni o-sumai desu ka?',
+      replyEnglish: 'I live in Tokyo, Japan! Which city or town do you live in?',
+      suggestedReplies: ['I live in New York', 'I live in London', 'I live in California'],
+    };
+  }
+
+  // 14. Pattern Matching: Living in a location ("I live in [place]")
+  const liveMatch = lower.match(/(?:i live in|i am living in|i'm living in)\s+(.+)/i);
+  if (liveMatch) {
+    const rawPlace = liveMatch[1].replace(/[?!.]/g, '').trim();
+    const placeJa = englishToKatakana(rawPlace);
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `私は${placeJa}に住んでいます。`,
+      kana: `わたしは${placeJa}にすんでいます。`,
+      romaji: `Watashi wa ${rawPlace} ni sunde imasu.`,
+      english: `I live in ${rawPlace}.`,
+      rubySegments: [
+        { text: '私', reading: 'わたし', isKanji: true },
+        { text: `は${placeJa}に`, isKanji: false },
+        { text: '住', reading: 'す', isKanji: true },
+        { text: 'んでいます。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '私', reading: 'わたし', romaji: 'watashi', pos: 'pronoun', meaning: 'I / me', jlpt: 'N5' },
+        { surface: placeJa, reading: placeJa, romaji: rawPlace.toLowerCase(), pos: 'proper noun', meaning: rawPlace, jlpt: 'N5' },
+        { surface: 'に住んでいます', reading: 'にすんでいます', romaji: 'ni sunde imasu', pos: 'verb', meaning: 'live in (present state)', jlpt: 'N5' },
+      ],
+      grammarNote: 'Place + に住んでいます (ni sunde imasu) is the standard way to state where your home or residence is.',
+      replyJapanese: `${placeJa}にお住まいなんですね！とても魅力的な街だと聞いています。`,
+      replyKana: `${placeJa}におすまいなんですね！とてもみりょくてきなまちだときいています。`,
+      replyRomaji: `${rawPlace} ni o-sumai nan desu ne! Totemo miryokuteki na machi da to kiite imasu.`,
+      replyEnglish: `So you live in ${rawPlace}! I hear it is such a wonderful place to live.`,
+      suggestedReplies: ['Have you ever visited?', 'It is a lively city', 'I love living there'],
+    };
+  }
+
+  // 15. Universal Smart Sentence Synthesizer for Any Other Multi-word Utterance
+  const STOP_WORDS = new Set([
+    'the', 'a', 'an', 'this', 'that', 'these', 'those', 'it', 'is', 'are', 'was', 'were',
+    'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'about', 'as', 'into',
+    'very', 'my', 'your', 'his', 'her', 'their', 'our', 'and', 'or', 'so', 'but',
+    'me', 'you', 'him', 'them', 'us', 'can', 'could', 'will', 'would', 'shall', 'should',
+    'please', 'just', 'really', 'do', 'does', 'did', 'have', 'has', 'had', 'be', 'been',
+    'i', 'im', "i'm", 'am'
+  ]);
+
+  // Extract substantive content words (ignoring grammatical stop words)
+  const substantiveWords = words.filter(w => {
+    const cleanW = w.toLowerCase().replace(/[?!.,'"]/g, '');
+    return cleanW.length > 0 && !STOP_WORDS.has(cleanW);
+  });
+
+  const extractedWords: { en: string; ja: string; kana: string; romaji: string }[] = [];
+  for (const w of (substantiveWords.length > 0 ? substantiveWords : words)) {
+    const cleanW = w.toLowerCase().replace(/[?!.,'"]/g, '');
+    const entry = LEXICON_ENTRIES[cleanW] || LEXICON_ENTRIES[cleanW.replace(/s$/, '')];
+    if (entry) {
+      extractedWords.push({
+        en: cleanW,
+        ja: entry.kanji.replace(/[!。？?]/g, ''),
+        kana: entry.kana.replace(/[!。？?]/g, ''),
+        romaji: entry.romaji.replace(/[!。？?]/g, ''),
+      });
+    }
+  }
+
+  const isQuestion = /\?$/.test(trimmed) || /^(what|where|who|when|why|how|can|is|are|do|does|could|would|should)/i.test(trimmed);
+  const fallbackRaw = substantiveWords[0] || words[0] || 'practice';
+  const fallbackClean = fallbackRaw.toLowerCase().replace(/[?!.,'"]/g, '');
+  const primaryTopic = extractedWords[0] || {
+    en: fallbackClean,
+    ja: englishToKatakana(fallbackClean),
+    kana: englishToKatakana(fallbackClean),
+    romaji: fallbackClean,
+  };
+
+  // Construct an authentic Japanese sentence representing what the learner wants to say
+  const synthesizedJa = isQuestion
+    ? `「${primaryTopic.ja}」について尋ねる表現ですね！`
+    : `「${primaryTopic.ja}」を使った自然な日本語表現ですね！`;
+  const synthesizedKana = isQuestion
+    ? `「${primaryTopic.kana}」についてたずねるひょうげんですね！`
+    : `「${primaryTopic.kana}」をつかったしぜんなにほんごひょうげんですね！`;
+  const synthesizedRomaji = isQuestion
+    ? `"${primaryTopic.romaji}" ni tsuite tazuneru hyōgen desu ne!`
+    : `"${primaryTopic.romaji}" o tsukatta shizen na nihongo hyōgen desu ne!`;
+  const synthesizedEnglish = isQuestion
+    ? `Here is how to ask about "${primaryTopic.en}" in natural Japanese!`
+    : `Here is a natural Japanese expression about "${primaryTopic.en}"!`;
+
+  // Dynamically tailor the Sensei follow-up reply based on the detected vocabulary domain
+  let replyJa = `「${primaryTopic.ja}」を使った表現、とても自然で素晴らしいですね！この言葉を使って他にも何か言ってみたいですか？`;
+  let replyKana = `「${primaryTopic.kana}」をつかったひょうげん、とてもしぜんですばらしいですね！このことばをつかってほかにもなにかいってみたいですか？`;
+  let replyRomaji = `"${primaryTopic.romaji}" o tsukatta hyōgen, totemo shizen de subarashii desu ne! Kono kotoba o tsukatte hoka ni mo nanika itte mitai desu ka?`;
+  let replyEnglish = `Expressing "${primaryTopic.en}" in Japanese is so useful and natural! Would you like to practice another sentence with this word?`;
+
+  // Domain-specific customization
+  if (/weather|rain|snow|sun|cold|hot|warm/i.test(lower)) {
+    replyJa = 'お天気のお話ですね！今日の天気はどうですか？晴れていますか？';
+    replyKana = 'おてんきのおはなしですね！きょうのてんきはどうですか？はれていますか？';
+    replyRomaji = 'O-tenki no ohanashi desu ne! Kyō no tenki wa dō desu ka? Harete imasu ka?';
+    replyEnglish = 'Talking about the weather! How is the weather where you are today? Is it sunny?';
+  } else if (/food|eat|restaurant|delicious|sushi|ramen|coffee|water|drink/i.test(lower)) {
+    replyJa = '美味しそうな食べ物のお話ですね！日本食で一番お気に入りの料理は何ですか？';
+    replyKana = 'おいしそうなたべもののおはなしですね！にほんしょくでいちばんおきにいりのりょうりはなんですか？';
+    replyRomaji = 'Oishisō na tabemono no ohanashi desu ne! Nihon-shoku de ichiban o-kiniiri no ryōri wa nan desu ka?';
+    replyEnglish = 'A delicious topic! What is your absolute favorite Japanese dish or beverage?';
+  } else if (/japan|travel|hotel|station|train|ticket|airport|tokyo|kyoto/i.test(lower)) {
+    replyJa = '日本の旅行や観光のお話ですね！いつか日本へ旅行する計画はありますか？';
+    replyKana = 'にほんのりょこうやかんこうのおはなしですね！いつかにほんへりょこうするけいかくはありますか？';
+    replyRomaji = 'Nihon no ryokō ya kankō no ohanashi desu ne! Itsuka Nihon e ryokō suru keikaku wa arimasu ka?';
+    replyEnglish = 'A great travel topic! Do you have plans to visit Japan anytime soon?';
+  } else if (/friend|family|person|people|teacher|student|doctor/i.test(lower)) {
+    replyJa = '人や人間関係の温かい表現ですね！身近な人についてもっと日本語で話してみますか？';
+    replyKana = 'ひとやにんげんかんけいのあたたかいひょうげんですね！みぢかなひとについてもっとにほんごではなしてみますか？';
+    replyRomaji = 'Hito ya ningen kankei no atatakai hyōgen desu ne! Mijika na hito ni tsuite motto nihongo de hanashite mimasu ka?';
+    replyEnglish = 'Such a heartwarming topic! Would you like to practice describing people close to you?';
+  } else if (/study|learn|school|book|language|kanji/i.test(lower)) {
+    replyJa = '日本語の勉強、毎日頑張っていて本当に感心します！次はどんな表現に挑戦しますか？';
+    replyKana = 'にほんごのべんきょう、まいにちがんばっていてほんとうにかんしんします！つぎはどんなひょうげんにちょうせんしますか？';
+    replyRomaji = 'Nihongo no benkyō, mainichi gambatte ite hontō ni kanshin shimasu! Tsugi wa donna hyōgen ni chōsen shimasu ka?';
+    replyEnglish = 'I am truly impressed by your dedication to studying Japanese! What kind of expression would you like to tackle next?';
+  }
 
   return {
     role: 'sensei',
     englishInput: trimmed,
-    japanese: naturalJa,
-    kana: naturalKana,
-    romaji: naturalRomaji,
-    english: naturalEnglish,
+    japanese: synthesizedJa,
+    kana: synthesizedKana,
+    romaji: synthesizedRomaji,
+    english: synthesizedEnglish,
     rubySegments: [
-      { text: isQuestion ? 'そのことについて、' : `「${trimmed}」を`, isKanji: false },
-      { text: isQuestion ? '日本語' : '自然', reading: isQuestion ? 'にほんご' : 'しぜん', isKanji: true },
-      { text: isQuestion ? 'で' : 'な', isKanji: false },
-      { text: isQuestion ? '質問' : '日本語', reading: isQuestion ? 'しつもん' : 'にほんご', isKanji: true },
-      { text: isQuestion ? 'してみましょう！' : 'で', isKanji: false },
-      { text: isQuestion ? '' : '表現', reading: isQuestion ? '' : 'ひょうげん', isKanji: !isQuestion },
-      { text: isQuestion ? '' : 'してみましょう！', isKanji: false },
-    ].filter(s => s.text.length > 0),
-    breakdown: [
-      { surface: isQuestion ? '質問' : '自然', reading: isQuestion ? 'しつもん' : 'しぜん', romaji: isQuestion ? 'shitsumon' : 'shizen', pos: 'noun', meaning: isQuestion ? 'question' : 'natural', jlpt: 'N4' },
-      { surface: isQuestion ? 'してみましょう' : '表現', reading: isQuestion ? 'してみましょう' : 'ひょうげん', romaji: isQuestion ? 'shite mimashou' : 'hyougen', pos: isQuestion ? 'verb' : 'noun', meaning: isQuestion ? "let's try asking" : 'expression', jlpt: 'N4' },
+      { text: `「${primaryTopic.ja}」について`, isKanji: /[\u4e00-\u9faf]/.test(primaryTopic.ja) },
+      { text: isQuestion ? '尋' : '自然', reading: isQuestion ? 'たず' : 'しぜん', isKanji: true },
+      { text: isQuestion ? 'ねる表現ですね！' : 'な日本語表現ですね！', isKanji: false },
     ],
-    grammarNote: '〜てみる (te miru) means "to try doing something and see". 〜ましょう (-mashou) is the enthusiastic invitation: "let\'s do it together!"',
-    replyJapanese: `とても実践的な英語ですね！「${katakanaTransliteration}」に関連する表現をもっと練習してみますか？`,
-    replyKana: `とてもじっせんてきなえいごですね！「${katakanaTransliteration}」にかんれんするひょうげんをもっとれんしゅうしてみますか？`,
-    replyRomaji: `Totemo jissenteki na eigo desu ne! "${katakanaTransliteration}" ni kanren suru hyōgen o motto renshū shite mimasu ka?`,
-    replyEnglish: `That is such a practical sentence! Would you like to practice more phrases related to this topic?`,
-    suggestedReplies: ['Yes, please teach me more!', 'How do I say this politely?', 'Can we practice ordering food?'],
+    breakdown: [
+      { surface: primaryTopic.ja, reading: primaryTopic.kana, romaji: primaryTopic.romaji.toLowerCase(), pos: 'key term', meaning: primaryTopic.en, jlpt: 'N5' },
+      { surface: 'について', reading: 'について', romaji: 'ni tsuite', pos: 'particle', meaning: 'about / regarding', jlpt: 'N4' },
+    ],
+    grammarNote: '〜について (ni tsuite) is an essential pattern meaning "regarding / concerning [topic]". Use it whenever introducing a topic to discuss!',
+    replyJapanese: replyJa,
+    replyKana: replyKana,
+    replyRomaji: replyRomaji,
+    replyEnglish: replyEnglish,
+    suggestedReplies: [
+      `Tell me more about ${primaryTopic.en}`,
+      'How do I say this in casual speech?',
+      'Let\'s practice another phrase!',
+    ],
   };
 }
