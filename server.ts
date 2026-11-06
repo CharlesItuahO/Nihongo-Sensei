@@ -1,4 +1,5 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+import type { Request, Response } from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from 'dotenv';
@@ -18,7 +19,11 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = Number(process.env.PORT) || 3000;
+  const args = process.argv;
+  const portArgIdx = args.indexOf('--port');
+  const portArg = portArgIdx !== -1 && args[portArgIdx + 1] ? Number(args[portArgIdx + 1]) : null;
+  // Dev server must always run on port 3000. Port 8080 is reserved by Nginx reverse proxy.
+  const PORT = portArg || (process.env.PORT && process.env.PORT !== '8080' ? Number(process.env.PORT) : 3000);
   const isProduction = process.env.NODE_ENV === 'production';
 
   // Body parsing for JSON and audio base64 payloads

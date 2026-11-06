@@ -270,6 +270,122 @@ export const LEXICON_ENTRIES: Record<string, LexiconEntry> = {
     replyEn: 'Are you thirsty? Try saying: "Omizu o kudasai" (Water, please)!',
     suggestedReplies: ['Water, please', 'I am thirsty', 'Could I have cold water?'],
   },
+  'cold water': {
+    kanji: '冷たいお水（お冷）',
+    kana: 'つめたいおみず（おひや）',
+    romaji: 'Tsumetai o-mizu (o-hiya)',
+    pos: 'noun',
+    meaning: 'cold water (served in restaurants)',
+    jlpt: 'N5',
+    ruby: [
+      { text: '冷', reading: 'つめ', isKanji: true },
+      { text: 'たいお', isKanji: false },
+      { text: '水', reading: 'みず', isKanji: true },
+      { text: '（お', isKanji: false },
+      { text: '冷', reading: 'ひや', isKanji: true },
+      { text: '）', isKanji: false },
+    ],
+    grammarNote: 'In Japanese casual dining and izakaya, servers often refer to complimentary iced water as お冷 (o-hiya). You can also say 冷たいお水 (tsumetai o-mizu).',
+    replyJa: '「冷たいお水をどうぞ！」と店員さんが氷入りのグラスを持ってきてくれますよ。',
+    replyKana: '「つめたいおみずをどうぞ！」とてんいんさんがこおりいりのぐらすをもってきてくれますよ。',
+    replyRomaji: '"Tsumetai o-mizu o dōzo!" to ten\'in-san ga kōri-iri no gurasu o motte kite kuremasu yo.',
+    replyEn: 'The server will bring a refreshing glass with ice: "Here is cold water for you!"',
+    suggestedReplies: ['Thank you very much', 'Can I see the menu?', 'One ramen, please'],
+  },
+  'hot water': {
+    kanji: 'お湯',
+    kana: 'おゆ',
+    romaji: 'O-yu',
+    pos: 'noun',
+    meaning: 'hot water',
+    jlpt: 'N5',
+    ruby: [
+      { text: 'お', isKanji: false },
+      { text: '湯', reading: 'ゆ', isKanji: true },
+    ],
+    grammarNote: 'Unlike English which uses "hot" + "water", Japanese has a distinct word for hot water: 湯 (yu) with polite prefix お湯 (o-yu).',
+    replyJa: '温かいお湯で体が温まりますね。熱いので気をつけて飲んでくださいね。',
+    replyKana: 'あたたかいおゆでからだがあたたまりますね。あついのできをつけてのんでくださいね。',
+    replyRomaji: 'Atatakai o-yu de karada ga atatamarimasu ne. Atsui node ki o tsukete nonde kudasai ne.',
+    replyEn: 'Warm hot water soothes the body! Please be careful since it is hot.',
+    suggestedReplies: ['Thank you Sensei', 'Hot tea, please', 'Cold water, please'],
+  },
+  'delicious ramen': {
+    kanji: '美味しいラーメン',
+    kana: 'おいしいらーめん',
+    romaji: 'Oishii rāmen',
+    pos: 'phrase',
+    meaning: 'delicious ramen',
+    jlpt: 'N5',
+    ruby: [
+      { text: '美味', reading: 'おい', isKanji: true },
+      { text: 'しいラーメン', isKanji: false },
+    ],
+    grammarNote: '美味しい (oishii, delicious) is an い-adjective directly modifying the noun ラーメン (rāmen).',
+    replyJa: '日本のラーメンは豚骨、醤油、味噌など種類が豊富で最高に美味しいですよ！どんな味が好きですか？',
+    replyKana: 'にほんのらーめんはとんこつ、しょうゆ、みそなどしゅるいがほうふでさいこうにおいしいですよ！どんなあじがすきですか？',
+    replyRomaji: 'Nihon no rāmen wa tonkotsu, shōyu, miso nado shurui ga hōfu de saikō ni oishii desu yo! Donna aji ga suki desu ka?',
+    replyEn: 'Japanese ramen is so diverse with tonkotsu, shoyu, and miso broths! Which flavor do you like best?',
+    suggestedReplies: ['Tonkotsu ramen', 'Miso ramen', 'Soy sauce ramen'],
+  },
+  'delicious sushi': {
+    kanji: '美味しい寿司',
+    kana: 'おいしいすし',
+    romaji: 'Oishii sushi',
+    pos: 'phrase',
+    meaning: 'delicious sushi',
+    jlpt: 'N5',
+    ruby: [
+      { text: '美味', reading: 'おい', isKanji: true },
+      { text: 'しい', isKanji: false },
+      { text: '寿司', reading: 'すし', isKanji: true },
+    ],
+    grammarNote: '美味しい (oishii) modifies 寿司 (sushi). Fresh seafood in Japan makes sushi world-renowned.',
+    replyJa: '築地や豊洲市場の新鮮な寿司は口の中でとろけますよ！サーモンやマグロはお好きですか？',
+    replyKana: 'つきじやとよすしじょうのしんせんなすしはくちのなかでとろけますよ！さーもんやまぐろはおすきですか？',
+    replyRomaji: 'Tsukiji ya Toyosu shijō no shinsen na sushi wa kuchi no naka de torokemasu yo! Sāmon ya maguro wa o-suki desu ka?',
+    replyEn: 'Fresh sushi at Tsukiji and Toyosu melts in your mouth! Do you like salmon and tuna?',
+    suggestedReplies: ['Salmon sushi, please', 'Tuna sushi, please', 'I love wasabi'],
+  },
+  'delicious food': {
+    kanji: '美味しい料理',
+    kana: 'おいしいりょうり',
+    romaji: 'Oishii ryōri',
+    pos: 'phrase',
+    meaning: 'delicious food / cuisine',
+    jlpt: 'N4',
+    ruby: [
+      { text: '美味', reading: 'おい', isKanji: true },
+      { text: 'しい', isKanji: false },
+      { text: '料理', reading: 'りょうり', isKanji: true },
+    ],
+    grammarNote: '料理 (ryōri) means cooking, food, or cuisine. 美味しい料理 means delicious food.',
+    replyJa: '旅の醍醐味は美味しい料理ですね！日本で一番食べてみたい名物は何ですか？',
+    replyKana: 'たびのだいごみはおいしいりょうりですね！にほんでいちばんたべてみたいめいぶつはなんですか？',
+    replyRomaji: 'Tabi no daigomi wa oishii ryōri desu ne! Nihon de ichiban tabete mitai meibutsu wa nan desu ka?',
+    replyEn: 'The best part of traveling is delicious food! What local specialty are you most eager to try in Japan?',
+    suggestedReplies: ['Ramen and gyoza', 'Sushi and sashimi', 'Tempura and udon'],
+  },
+  'japanese food': {
+    kanji: '日本食（和食）',
+    kana: 'にほんしょく（わしょく）',
+    romaji: 'Nihon-shoku (washoku)',
+    pos: 'noun',
+    meaning: 'Japanese food / Japanese cuisine',
+    jlpt: 'N4',
+    ruby: [
+      { text: '日本食', reading: 'にほんしょく', isKanji: true },
+      { text: '（', isKanji: false },
+      { text: '和食', reading: 'わしょく', isKanji: true },
+      { text: '）', isKanji: false },
+    ],
+    grammarNote: '和食 (washoku) is UNESCO-recognized traditional Japanese cuisine emphasizing seasonal ingredients and balance.',
+    replyJa: '和食は健康的で見た目も美しいですね！どんな和食を食べたことがありますか？',
+    replyKana: 'わしょくはけんこうてきでみた目もうつくしいですね！どんなわしょくをたべたことがありますか？',
+    replyRomaji: 'Washoku wa kenkōteki de mitame mo utsukushii desu ne! Donna washoku o tabeta koto ga arimasu ka?',
+    replyEn: 'Washoku is healthy, balanced, and aesthetically beautiful! What Japanese dishes have you tried before?',
+    suggestedReplies: ['Ramen and sushi', 'Miso soup and rice', 'I want to try kaiseki'],
+  },
   coffee: {
     kanji: 'コーヒー',
     kana: 'こーひー',
@@ -302,6 +418,26 @@ export const LEXICON_ENTRIES: Record<string, LexiconEntry> = {
     replyRomaji: 'Nihon no ocha wa totemo kaori ga yoi desu yo. Atatakai ocha wa ikaga desu ka?',
     replyEn: 'Japanese tea has such a lovely aroma. Would you like some warm tea?',
     suggestedReplies: ['Green tea, please', 'Hot tea, please', 'I love Japanese tea'],
+  },
+  'green tea': {
+    kanji: '緑茶（お茶）',
+    kana: 'りょくちゃ（おちゃ）',
+    romaji: 'Ryokucha (ocha)',
+    pos: 'noun',
+    meaning: 'green tea',
+    jlpt: 'N5',
+    ruby: [
+      { text: '緑茶', reading: 'りょくちゃ', isKanji: true },
+      { text: '（お', isKanji: false },
+      { text: '茶', reading: 'ちゃ', isKanji: true },
+      { text: '）', isKanji: false },
+    ],
+    grammarNote: '緑茶 (ryokucha) specifically means Japanese green tea. In Japanese restaurants and homes, simply asking for お茶 (ocha) will also get you green tea!',
+    replyJa: '香ばしい緑茶はとても落ち着きますね。温かい緑茶と冷たい緑茶、どちらがよろしいですか？',
+    replyKana: 'こうばしいりょくちゃはとてもおちつきますね。あたたかいりょくちゃとつめたいりょくちゃ、どちらがよろしいですか？',
+    replyRomaji: 'Kōbashii ryokucha wa totemo ochitsukimasu ne. Atatakai ryokucha to tsumetai ryokucha, dochira ga yoroshii desu ka?',
+    replyEn: 'Fragrant green tea is so soothing! Would you prefer warm green tea or iced green tea?',
+    suggestedReplies: ['Warm green tea, please', 'Iced green tea, please', 'Thank you Sensei'],
   },
   milk: {
     kanji: '牛乳（ミルク）',
@@ -743,6 +879,103 @@ export const LEXICON_ENTRIES: Record<string, LexiconEntry> = {
     replyRomaji: 'Kyōto no Kinkaku-ji ya Kiyomizu-dera wa iki o nomu hodo utsukushii desu yo. Zehi kimono o kite sansaku shite mite kudasai!',
     replyEn: 'Kyoto\'s Golden Pavilion and Kiyomizu-dera are breathtaking. Strolling around in a kimono is an unforgettable experience!',
     suggestedReplies: ['I want to see the Golden Pavilion', 'Visiting traditional shrines', 'Taking the bullet train to Kyoto'],
+  },
+  culture: {
+    kanji: '文化',
+    kana: 'ぶんか',
+    romaji: 'Bunka',
+    pos: 'noun',
+    meaning: 'culture',
+    jlpt: 'N3',
+    ruby: [{ text: '文化', reading: 'ぶんか', isKanji: true }],
+    grammarNote: '文化 (bunka) means culture or civilization. 日本の文化 (Nihon no bunka) means Japanese culture.',
+    replyJa: '日本の伝統文化からポップカルチャーまで、興味深いものがたくさんあります！何が一番気になりますか？',
+    replyKana: 'にほんのでんとうぶんかからぽっぷかるちゃーまで、きょうみぶかいものがたくさんあります！なにがいちばんきになりますか？',
+    replyRomaji: 'Nihon no dentō bunka kara poppu karuchā made, kyōmibukai mono ga takusan arimasu! Nani ga ichiban ki ni narimasu ka?',
+    replyEn: 'From traditional culture to modern pop culture, Japan has so much to offer! What interests you most?',
+    suggestedReplies: ['Traditional tea ceremony', 'Anime and manga', 'Japanese cuisine'],
+  },
+  'japanese culture': {
+    kanji: '日本の文化',
+    kana: 'にほんのぶんか',
+    romaji: 'Nihon no bunka',
+    pos: 'phrase',
+    meaning: 'Japanese culture',
+    jlpt: 'N4',
+    ruby: [
+      { text: '日本', reading: 'にほん', isKanji: true },
+      { text: 'の', isKanji: false },
+      { text: '文化', reading: 'ぶんか', isKanji: true },
+    ],
+    grammarNote: '日本の (Nihon no, of Japan) + 文化 (bunka, culture). The particle の links the country to culture.',
+    replyJa: '日本の文化に興味を持っていただけて嬉しいです！茶道、着物、お祭りなど、どれも奥深いですよ。',
+    replyKana: 'にほんのぶんかにきょうみをもっていただけてうれしいです！さどう、きもの、おまつりなど、どれもおくぶかいですよ。',
+    replyRomaji: 'Nihon no bunka ni kyōmi o motte itadakete ureshii desu! Sadō, kimono, o-matsuri nado, dore mo okubukai desu yo.',
+    replyEn: 'I am so thrilled you are interested in Japanese culture! Tea ceremony, kimono, festivals—they all have deep meaning.',
+    suggestedReplies: ['Tell me about tea ceremony', 'Tell me about festivals', 'I love anime and games'],
+  },
+  anime: {
+    kanji: 'アニメ',
+    kana: 'あにめ',
+    romaji: 'Anime',
+    pos: 'noun',
+    meaning: 'anime / animation',
+    jlpt: 'N5',
+    ruby: [{ text: 'アニメ', isKanji: false }],
+    grammarNote: 'Short for アニメーション (animēshon). Japanese anime is known and loved worldwide!',
+    replyJa: 'どんなアニメが好きですか？スタジオジブリやバトルアニメなど、名作がたくさんありますね！',
+    replyKana: 'どんなあにめがすきですか？すたじおじぶりやばとるあにめなど、めいさくがたくさんありますね！',
+    replyRomaji: 'Donna anime ga suki desu ka? Sutajio Jiburi ya batoru anime nado, meisaku ga takusan arimasu ne!',
+    replyEn: 'What kind of anime do you like? From Studio Ghibli to shonen action, there are so many masterpieces!',
+    suggestedReplies: ['I love Studio Ghibli', 'I watch anime with subtitles', 'Teach me anime phrases'],
+  },
+  history: {
+    kanji: '歴史',
+    kana: 'れきし',
+    romaji: 'Rekishi',
+    pos: 'noun',
+    meaning: 'history',
+    jlpt: 'N3',
+    ruby: [{ text: '歴史', reading: 'れきし', isKanji: true }],
+    grammarNote: '歴史 (rekishi) refers to history. Samurai (侍) and castle (城 shiro) eras are fascinating chapters of Japanese history.',
+    replyJa: '日本の歴史は侍や城、将軍などドラマチックでとても面白いですよ！',
+    replyKana: 'にほんのれきしはさむらいやしろ、しょうぐんなどどらまちっくでとてもおもしろいですよ！',
+    replyRomaji: 'Nihon no rekishi wa samurai ya shiro, shōgun nado doramachikku de totemo omoshiroi desu yo!',
+    replyEn: 'Japanese history is dramatic and fascinating with samurai, castles, and shoguns!',
+    suggestedReplies: ['Tell me about Samurai', 'Tell me about Japanese castles', 'Kyoto history'],
+  },
+  temple: {
+    kanji: 'お寺',
+    kana: 'おてら',
+    romaji: 'O-tera',
+    pos: 'noun',
+    meaning: 'Buddhist temple',
+    jlpt: 'N5',
+    ruby: [
+      { text: 'お', isKanji: false },
+      { text: '寺', reading: 'てら', isKanji: true },
+    ],
+    grammarNote: 'お寺 (o-tera) refers to Buddhist temples (marked by incense, bell towers, and Buddha statues). Shinto shrines are called 神社 (jinja).',
+    replyJa: '日本のお寺は庭園も静かで美しいですよ。京都や奈良には国宝のお寺がたくさんあります。',
+    replyKana: 'にほんのおてらはていえんもしずかでうつくしいですよ。きょうとやまほにはこくほうのおてらがたくさんあります。',
+    replyRomaji: 'Nihon no o-tera wa teien mo shizuka de utsukushii desu yo. Kyōto ya Nara ni wa kokuhō no o-tera ga takusan arimasu.',
+    replyEn: 'Japanese temples have serene, beautiful gardens. Kyoto and Nara are home to countless national treasures.',
+    suggestedReplies: ['Where is Senso-ji temple?', 'How to visit a temple', 'Is photography allowed?'],
+  },
+  shrine: {
+    kanji: '神社',
+    kana: 'じんじゃ',
+    romaji: 'Jinja',
+    pos: 'noun',
+    meaning: 'Shinto shrine',
+    jlpt: 'N5',
+    ruby: [{ text: '神社', reading: 'じんじゃ', isKanji: true }],
+    grammarNote: '神社 (jinja) are Shinto shrines, recognized by the red torii gates (鳥居) welcoming visitors at the entrance.',
+    replyJa: '神社の鳥居をくぐると神聖な気持ちになりますね。お参りの作法（二礼二拍手一礼）を練習してみましょう！',
+    replyKana: 'じんじゃのとりいをくぐるとしんせいなきもちになりますね。おまいりのさほう（にれいにはくしゅいちれい）をれんしゅうしてみましょう！',
+    replyRomaji: 'Jinja no torii o kuguru to shinsei na kimochi ni narimasu ne. O-mairi no sahō (ni-rei ni-hakushu ichi-rei) o renshū shite mimashō!',
+    replyEn: 'Passing under a shrine\'s torii gate feels sacred and refreshing. Let\'s practice the bow-and-clap ritual!',
+    suggestedReplies: ['How to pray at a shrine', 'Where is Fushimi Inari?', 'What is a torii gate?'],
   },
 
   // --- Shopping & Numbers ---
@@ -2066,10 +2299,42 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
   const whereMatch = lower.match(/(?:where is|where's|how do i get to)\s+(?:the\s+)?(.+)/i);
   if (whereMatch) {
     const rawPlace = whereMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
-    const placeEntry = LEXICON_ENTRIES[rawPlace.toLowerCase()];
-    const placeJa = placeEntry?.kanji || englishToKatakana(rawPlace);
-    const placeKana = placeEntry?.kana || placeJa;
-    const placeRomaji = placeEntry?.romaji || rawPlace;
+    const placeLower = rawPlace.toLowerCase();
+    
+    // Check known location mappings
+    let placeJa = '';
+    let placeKana = '';
+    let placeRomaji = '';
+    let placeEntry = LEXICON_ENTRIES[placeLower];
+
+    if (placeLower === 'bus stop' || placeLower === 'bus') {
+      placeJa = 'バス停'; placeKana = 'ばすてい'; placeRomaji = 'basu-tei';
+    } else if (placeLower === 'taxi stand' || placeLower === 'taxi') {
+      placeJa = 'タクシー乗り場'; placeKana = 'たくしーのりば'; placeRomaji = 'takushī-noriba';
+    } else if (placeLower.includes('subway')) {
+      placeJa = '地下鉄の駅'; placeKana = 'ちかてつのえき'; placeRomaji = 'chikatetsu no eki';
+    } else if (placeLower.includes('station') || placeLower === 'train station') {
+      placeJa = '駅'; placeKana = 'えき'; placeRomaji = 'eki';
+    } else if (placeLower === 'exit') {
+      placeJa = '出口'; placeKana = 'でぐち'; placeRomaji = 'deguchi';
+    } else if (placeLower === 'entrance') {
+      placeJa = '入口'; placeKana = 'いりぐち'; placeRomaji = 'iriguchi';
+    } else if (placeLower.includes('bathroom') || placeLower.includes('restroom')) {
+      placeJa = 'お手洗い'; placeKana = 'おてあらい'; placeRomaji = 'o-tearai';
+    } else if (placeLower === 'toilet') {
+      placeJa = 'トイレ'; placeKana = 'といれ'; placeRomaji = 'toire';
+    } else if (placeLower.includes('hotel')) {
+      placeJa = 'ホテル'; placeKana = 'ほてる'; placeRomaji = 'hoteru';
+    } else if (placeLower.includes('airport')) {
+      placeJa = '空港'; placeKana = 'くうこう'; placeRomaji = 'kūkō';
+    } else if (placeLower.includes('convenience store') || placeLower === 'kombini') {
+      placeJa = 'コンビニ'; placeKana = 'こんびに'; placeRomaji = 'kombini';
+    } else {
+      placeEntry = LEXICON_ENTRIES[placeLower];
+      placeJa = placeEntry?.kanji || englishToKatakana(rawPlace);
+      placeKana = placeEntry?.kana || placeJa;
+      placeRomaji = placeEntry?.romaji || rawPlace;
+    }
     return {
       role: 'sensei',
       englishInput: trimmed,
@@ -2078,7 +2343,7 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
       romaji: `${placeRomaji} wa doko desu ka?`,
       english: `Where is the ${rawPlace}?`,
       rubySegments: [
-        ...(placeEntry?.ruby || [{ text: placeJa, isKanji: false }]),
+        ...(placeEntry?.ruby || [{ text: placeJa, isKanji: /[\u4e00-\u9faf]/.test(placeJa) }]),
         { text: 'はどこですか？', isKanji: false },
       ],
       breakdown: [
@@ -2131,14 +2396,21 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
     };
   }
 
-  // 8. Pattern Matching: Requests ("Can I have [item], please" / "Please give me [item]")
-  const pleaseMatch = lower.match(/(?:can i have|please give me|i would like|i'd like)\s+(?:a\s+|an\s+|some\s+)?(.+)/i);
-  if (pleaseMatch) {
-    const rawReq = pleaseMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
-    const reqEntry = LEXICON_ENTRIES[rawReq.toLowerCase()];
-    const reqJa = reqEntry?.kanji || englishToKatakana(rawReq);
-    const reqKana = reqEntry?.kana || reqJa;
-    const reqRomaji = reqEntry?.romaji || rawReq;
+  // 8. Pattern Matching: Requests ("Can I have [item], please" / "Please give me [item]" / "[item], please")
+  let rawReq: string | null = null;
+  const prefixReq = lower.match(/(?:can i have|could i have|please give me|i would like|i'd like)\s+(?:a\s+|an\s+|some\s+)?(.+)/i);
+  const suffixReq = lower.match(/^(.+?)[,\s]+please$/i);
+  if (prefixReq) {
+    rawReq = prefixReq[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+  } else if (suffixReq && !/^(yes|no|thank you|thanks|hello|hi|please)$/i.test(suffixReq[1].trim())) {
+    rawReq = suffixReq[1].replace(/[?!.]/g, '').trim();
+  }
+
+  if (rawReq) {
+    const reqEntry = LEXICON_ENTRIES[rawReq.toLowerCase()] || LEXICON_ENTRIES[rawReq.toLowerCase().replace(/s$/, '')];
+    const reqJa = reqEntry?.kanji.replace(/[!。？?]/g, '') || englishToKatakana(rawReq);
+    const reqKana = reqEntry?.kana.replace(/[!。？?]/g, '') || reqJa;
+    const reqRomaji = reqEntry?.romaji.replace(/[!。？?]/g, '') || rawReq;
     return {
       role: 'sensei',
       englishInput: trimmed,
@@ -2147,7 +2419,7 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
       romaji: `${reqRomaji} o kudasai.`,
       english: `Could I have ${rawReq}, please?`,
       rubySegments: [
-        ...(reqEntry?.ruby || [{ text: reqJa, isKanji: false }]),
+        ...(reqEntry?.ruby || [{ text: reqJa, isKanji: /[\u4e00-\u9faf]/.test(reqJa) }]),
         { text: 'をください。', isKanji: false },
       ],
       breakdown: [
@@ -2499,119 +2771,648 @@ export function translateLinguistically(englishInput: string, level: Level): Omi
     };
   }
 
-  // 15. Universal Smart Sentence Synthesizer for Any Other Multi-word Utterance
+  // 15. Pattern Matching: Restaurant & Dining Inquiries
+  if (/(?:check please|bill please|the check|the bill|can i have the check|can we have the check)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'お会計をお願いします。',
+      kana: 'おかいけいをおねがいします。',
+      romaji: 'O-kaikei o onegai shimasu.',
+      english: 'The check, please. / Could we have the bill?',
+      rubySegments: [
+        { text: 'お', isKanji: false },
+        { text: '会計', reading: 'かいけい', isKanji: true },
+        { text: 'をお', isKanji: false },
+        { text: '願', reading: 'ねが', isKanji: true },
+        { text: 'いします。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'お会計', reading: 'おかいけい', romaji: 'o-kaikei', pos: 'noun', meaning: 'bill / check (polite)', jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'object marker', jlpt: 'N5' },
+        { surface: 'お願いします', reading: 'おねがいします', romaji: 'onegai shimasu', pos: 'phrase', meaning: 'please / I request', jlpt: 'N5' },
+      ],
+      grammarNote: 'お会計をお願いします (O-kaikei o onegai shimasu) is the polite, standard way to ask for the bill at restaurants and cafés in Japan.',
+      replyJapanese: '「ごちそうさまでした、お会計をお願いします」と伝えるととてもスマートですよ！レジに向かいましょう。',
+      replyKana: '「ごちそうさまでした、おかいけいをおねがいします」とつたえるととてもすまーとですよ！れじにむかいましょう。',
+      replyRomaji: '"Gochisōsama deshita, o-kaikei o onegai shimasu" to tsutaeru to totemo sumāto desu yo! Reji ni mukaimashō.',
+      replyEnglish: 'Saying "Gochisōsama deshita, o-kaikei o onegai shimasu" is very natural and polite! Let\'s head to the register.',
+      suggestedReplies: ['Can I pay by credit card?', 'Receipt, please', 'Thank you for the delicious meal!'],
+    };
+  }
+
+  if (/(?:credit card|pay by card|by credit card|card payment)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'クレジットカードで払えますか？',
+      kana: 'くれじっとかーどではらえますか？',
+      romaji: 'Kurejitto kādo de haraemasu ka?',
+      english: 'Can I pay by credit card?',
+      rubySegments: [
+        { text: 'クレジットカードで', isKanji: false },
+        { text: '払', reading: 'はら', isKanji: true },
+        { text: 'えますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'クレジットカード', reading: 'くれじっとかーど', romaji: 'kurejitto kaado', pos: 'noun', meaning: 'credit card', jlpt: 'N5' },
+        { surface: 'で', reading: 'で', romaji: 'de', pos: 'particle', meaning: 'by means of', jlpt: 'N5' },
+        { surface: '払えますか', reading: 'はらえますか', romaji: 'haraemasu ka', pos: 'verb', meaning: 'can I pay? (potential form)', jlpt: 'N4' },
+      ],
+      grammarNote: '払う (harau, to pay) conjugates to potential form 払えます (haraemasu, can pay). で indicates the method of payment.',
+      replyJapanese: '「はい、VISAもMastercardも使えますよ」と店員さんが端末を案内してくれますよ！',
+      replyKana: '「はい、びざもますたーかーどもつかえますよ」とてんいんさんがたんまつをあんないしてくれますよ！',
+      replyRomaji: '"Hai, VISA mo Mastercard mo tsukaemasu yo" to ten\'in-san ga tammatsu o annai shite kuremasu yo!',
+      replyEnglish: 'Staff will reply: "Yes, both Visa and Mastercard are accepted," and guide you to the card reader.',
+      suggestedReplies: ['Touch to pay, please', 'Here is my card', 'Receipt, please'],
+    };
+  }
+
+  if (/(?:receipt please|can i have a receipt|give me a receipt)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'レシートをお願いします。',
+      kana: 'れしーとをおねがいします。',
+      romaji: 'Reshīto o onegai shimasu.',
+      english: 'Receipt, please.',
+      rubySegments: [
+        { text: 'レシートをお', isKanji: false },
+        { text: '願', reading: 'ねが', isKanji: true },
+        { text: 'いします。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'レシート', reading: 'れしーと', romaji: 'reshiito', pos: 'noun', meaning: 'receipt', jlpt: 'N5' },
+        { surface: 'をお願いします', reading: 'をおねがいします', romaji: 'o onegai shimasu', pos: 'phrase', meaning: 'please give me', jlpt: 'N5' },
+      ],
+      grammarNote: 'レシート (reshīto) is used for standard store receipts. Formal business tax receipts are called 領収書 (ryōshūsho).',
+      replyJapanese: 'お会計の後に「レシートをお願いします」と言えば笑顔で手渡してくれますよ！',
+      replyKana: 'おかいけいのあとに「れしーとをおねがいします」といえばえがおでてわたしてくれますよ！',
+      replyRomaji: 'O-kaikei no ato ni "Reshīto o onegai shimasu" to ieba egao de tewatashite kuremasu yo!',
+      replyEnglish: 'Say "Reshīto o onegai shimasu" at checkout and the cashier will hand it over with a smile!',
+      suggestedReplies: ['Thank you very much', 'Have a good day', 'See you later!'],
+    };
+  }
+
+  if (/(?:see the menu|menu please|can i see a menu|english menu)/i.test(lower)) {
+    const isEnglish = /english/i.test(lower);
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: isEnglish ? '英語のメニューはありますか？' : 'メニューを見せていただけますか？',
+      kana: isEnglish ? 'えいごのめにゅーはありますか？' : 'めにゅーをみせていただけますか？',
+      romaji: isEnglish ? 'Eigo no menyū wa arimasu ka?' : 'Menyū o misete itadakemasu ka?',
+      english: isEnglish ? 'Do you have an English menu?' : 'Could you please show me the menu?',
+      rubySegments: [
+        { text: isEnglish ? '英語' : 'メニューを', reading: isEnglish ? 'えいご' : undefined, isKanji: isEnglish },
+        { text: isEnglish ? 'のメニューはありますか？' : '見', reading: isEnglish ? undefined : 'み', isKanji: !isEnglish },
+        { text: isEnglish ? '' : 'せていただけますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: isEnglish ? '英語' : 'メニュー', reading: isEnglish ? 'えいご' : 'めにゅー', romaji: isEnglish ? 'eigo' : 'menyuu', pos: 'noun', meaning: isEnglish ? 'English' : 'menu', jlpt: 'N5' },
+        { surface: isEnglish ? 'ありますか' : '見せていただけますか', reading: isEnglish ? 'ありますか' : 'みせていただけますか', romaji: isEnglish ? 'arimasu ka' : 'misete itadakemasu ka', pos: 'verb', meaning: isEnglish ? 'is there?' : 'could I see?', jlpt: 'N5' },
+      ],
+      grammarNote: '〜を見せていただけますか (o misete itadakemasu ka) is an ultra-polite request meaning "Could you please show me...".',
+      replyJapanese: '「はい、どうぞ！こちらがメニューです」と店員さんが持ってきてくれますよ。',
+      replyKana: '「はい、どうぞ！こちらがめにゅーです」とてんいんさんがもってきてくれますよ。',
+      replyRomaji: '"Hai, dōzo! Kochira ga menyū desu" to ten\'in-san ga motte kite kuremasu yo.',
+      replyEnglish: 'Staff will smile and say: "Hai, dōzo! (Here you are!) Here is the menu."',
+      suggestedReplies: ['What is your recommendation?', 'I will order water first', 'One ramen, please'],
+    };
+  }
+
+  if (/(?:recommend|recommendation|what do you recommend)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'おすすめは何ですか？',
+      kana: 'おすすめはなんですか？',
+      romaji: 'Osusume wa nan desu ka?',
+      english: 'What do you recommend?',
+      rubySegments: [
+        { text: 'おすすめは', isKanji: false },
+        { text: '何', reading: 'なん', isKanji: true },
+        { text: 'ですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'おすすめ', reading: 'おすすめ', romaji: 'osusume', pos: 'noun', meaning: 'recommendation', jlpt: 'N5' },
+        { surface: 'は', reading: 'は', romaji: 'wa', pos: 'particle', meaning: 'topic marker', jlpt: 'N5' },
+        { surface: '何', reading: 'なん', romaji: 'nan', pos: 'interrogative', meaning: 'what', jlpt: 'N5' },
+        { surface: 'ですか', reading: 'ですか', romaji: 'desu ka', pos: 'phrase', meaning: 'is it?', jlpt: 'N5' },
+      ],
+      grammarNote: 'おすすめ (osusume) means recommendation. In restaurants, staff love when customers ask "Osusume wa nan desu ka?".',
+      replyJapanese: '本場の握り寿司や、出来立ての温かい豚骨ラーメンが一番のおすすめですよ！何が食べたい気分ですか？',
+      replyKana: 'ほんばのにぎりずしや、できたてのあたたかいとんこつらーめんがいちばんのおすすめですよ！なにがたべたいきぶんですか？',
+      replyRomaji: 'Homba no nigirizushi ya, dekitate no atatakai tonkotsu rāmen ga ichiban no osusume desu yo! Nani ga tabetai kibun desu ka?',
+      replyEnglish: 'Freshly pressed nigiri sushi and steaming hot tonkotsu ramen are my top recommendations! What are you craving?',
+      suggestedReplies: ['I will have the sushi, please', 'Ramen sounds amazing', 'Is it spicy?'],
+    };
+  }
+
+  // 16. Pattern Matching: Transportation & Transit (Taxi, Bus, Stations, Exits)
+  if (/(?:find a taxi|catch a taxi|where.*taxi|taxi stand|take a taxi)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'タクシー乗り場はどこですか？',
+      kana: 'たくしーのりばはどこですか？',
+      romaji: 'Takushī-noriba wa doko desu ka?',
+      english: 'Where is the taxi stand?',
+      rubySegments: [
+        { text: 'タクシー', isKanji: false },
+        { text: '乗', reading: 'の', isKanji: true },
+        { text: 'り', isKanji: false },
+        { text: '場', reading: 'ば', isKanji: true },
+        { text: 'はどこですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'タクシー乗り場', reading: 'たくしーのりば', romaji: 'takushii noriba', pos: 'noun', meaning: 'taxi stand', jlpt: 'N5' },
+        { surface: 'はどこですか', reading: 'はどこですか', romaji: 'wa doko desu ka', pos: 'phrase', meaning: 'where is...?', jlpt: 'N5' },
+      ],
+      grammarNote: '乗り場 (noriba) means boarding area or stand. Combine it with バス (bus) or タクシー (taxi)!',
+      replyJapanese: '駅の改札を出てすぐのロータリーにタクシー乗り場がありますよ！運転手さんに行き先を伝えてみましょう。',
+      replyKana: 'えきのかいさつをでてすぐのろーたりーにたくしーのりばがありますよ！うんてんしゅさんにいきさきをつたえてみましょう。',
+      replyRomaji: 'Eki no kaisatsu o dete sugu no rōtarī ni takushī-noriba ga arimasu yo! Untenshu-san ni ikisaki o tsutaete mimashō.',
+      replyEnglish: 'There is a taxi stand right outside the station ticket gates! Just tell the driver your destination.',
+      suggestedReplies: ['To the hotel, please', 'To Tokyo Station, please', 'How much does it cost?'],
+    };
+  }
+
+  if (/(?:bus stop|where.*bus)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: 'バス停はどこですか？',
+      kana: 'ばすていはどこですか？',
+      romaji: 'Basu-tei wa doko desu ka?',
+      english: 'Where is the bus stop?',
+      rubySegments: [
+        { text: 'バス', isKanji: false },
+        { text: '停', reading: 'てい', isKanji: true },
+        { text: 'はどこですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: 'バス停', reading: 'ばすてい', romaji: 'basutei', pos: 'noun', meaning: 'bus stop', jlpt: 'N5' },
+        { surface: 'はどこですか', reading: 'はどこですか', romaji: 'wa doko desu ka', pos: 'phrase', meaning: 'where is...?', jlpt: 'N5' },
+      ],
+      grammarNote: 'バス停 (basutei) is short for バス停留所 (bus teiryūjo). You can pay with your Suica or Pasmo IC card!',
+      replyJapanese: 'あちらの横断歩道を渡った先にバス停がありますよ。何番のバスに乗りますか？',
+      replyKana: 'あちらのおうだんほどうをわたったさきにばすていがありますよ。なんばんのばすにのりますか？',
+      replyRomaji: 'Achira no ōdanhodō o watatta saki ni basu-tei ga arimasu yo. Namban no basu ni norimasu ka?',
+      replyEnglish: 'The bus stop is just across that pedestrian crossing. Which bus number are you taking?',
+      suggestedReplies: ['To the airport, please', 'Bus number 5', 'Can I use an IC card?'],
+    };
+  }
+
+  if (/(?:where.*exit|which way.*exit)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '出口はどこですか？',
+      kana: 'でぐちはどこですか？',
+      romaji: 'Deguchi wa doko desu ka?',
+      english: 'Where is the exit?',
+      rubySegments: [
+        { text: '出口', reading: 'でぐち', isKanji: true },
+        { text: 'はどこですか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '出口', reading: 'でぐち', romaji: 'deguchi', pos: 'noun', meaning: 'exit', jlpt: 'N5' },
+        { surface: 'はどこですか', reading: 'はどこですか', romaji: 'wa doko desu ka', pos: 'phrase', meaning: 'where is...?', jlpt: 'N5' },
+      ],
+      grammarNote: '出口 (deguchi) combines 出 (exit/out) + 口 (opening/mouth). Entrance is 入口 (iriguchi).',
+      replyJapanese: '黄色い案内板に「出口 (EXIT)」と書かれていますよ。エスカレーターを上がってみましょう！',
+      replyKana: 'きいろいあんないばんに「でぐち」とかかれていますよ。えすかれーたーをあがってみましょう！',
+      replyRomaji: 'Kiiroi annaiban ni "Deguchi" to kakarete imasu yo. Esukarētā o agatte mimashō!',
+      replyEnglish: 'Follow the yellow signs marked "出口 (EXIT)". Let\'s take the escalator up!',
+      suggestedReplies: ['North exit, please', 'Where is the elevator?', 'Thank you very much'],
+    };
+  }
+
+  // 17. Pattern Matching: Photography & Wi-Fi
+  if (/(?:take a photo|take a picture|take my picture|take our picture)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '写真を撮っていただけますか？',
+      kana: 'しゃしんをとっていただけますか？',
+      romaji: 'Shashin o totte itadakemasu ka?',
+      english: 'Could you please take a photo for me?',
+      rubySegments: [
+        { text: '写真', reading: 'しゃしん', isKanji: true },
+        { text: 'を', isKanji: false },
+        { text: '撮', reading: 'と', isKanji: true },
+        { text: 'っていただけますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '写真', reading: 'しゃしん', romaji: 'shashin', pos: 'noun', meaning: 'photograph', jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'object marker', jlpt: 'N5' },
+        { surface: '撮る', reading: 'とる', romaji: 'toru', pos: 'verb', meaning: 'to take (a photo)', jlpt: 'N5' },
+        { surface: 'いただけますか', reading: 'いただけますか', romaji: 'itadakemasu ka', pos: 'phrase', meaning: 'could you please', jlpt: 'N4' },
+      ],
+      grammarNote: '写真 (shashin) + を撮る (o toru) = to take a photo. When someone agrees, say はい、チーズ (Hai, chiizu)!',
+      replyJapanese: '「はい、喜んで！はい、チーズ！」と笑顔で撮ってくれますよ。素敵な記念写真になりそうですね！',
+      replyKana: '「はい、よろこんで！はい、ちーず！」とえがおでとってくれますよ。すてきなきねんしゃしんになりそうですね！',
+      replyRomaji: '"Hai, yorokonde! Hai, chīzu!" to egao de totte kuremasu yo. Suteki na kinen shashin ni narisō desu ne!',
+      replyEnglish: 'People will gladly reply: "Yes, with pleasure! Say cheese!" It will make a wonderful keepsake memory.',
+      suggestedReplies: ['One more picture, please', 'Thank you very much!', 'With Mt. Fuji in the background'],
+    };
+  }
+
+  if (/(?:wifi|wi-fi|free wifi|internet)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '無料Wi-Fiはありますか？',
+      kana: 'むりょうわいふぁいはありますか？',
+      romaji: 'Muryō waifai wa arimasu ka?',
+      english: 'Is there free Wi-Fi here?',
+      rubySegments: [
+        { text: '無料', reading: 'むりょう', isKanji: true },
+        { text: 'Wi-Fiはありますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '無料', reading: 'むりょう', romaji: 'muryou', pos: 'noun', meaning: 'free of charge', jlpt: 'N5' },
+        { surface: 'Wi-Fi', reading: 'わいふぁい', romaji: 'waifai', pos: 'noun', meaning: 'Wi-Fi', jlpt: 'N5' },
+        { surface: 'ありますか', reading: 'ありますか', romaji: 'arimasu ka', pos: 'verb', meaning: 'is there? (existence)', jlpt: 'N5' },
+      ],
+      grammarNote: '無料 (muryō) means free/complimentary. To ask for the password, say: パスワードは何ですか？ (Pasuwādo wa nan desu ka?).',
+      replyJapanese: '「はい、レシートの下にパスワードが書いてありますよ」と教えてもらえますよ！',
+      replyKana: '「はい、れしーとのしたにぱすわーどがかいてありますよ」とおしえてもらえますよ！',
+      replyRomaji: '"Hai, reshīto no shita ni pasuwādo ga kaite arimasu yo" to oshiete moraemasu yo!',
+      replyEnglish: 'They will tell you: "Yes, the password is printed at the bottom of your receipt!"',
+      suggestedReplies: ['What is the password?', 'Thank you very much', 'Is it fast?'],
+    };
+  }
+
+  // 18. Pattern Matching: Borrowing & Everyday Requests ("Can I borrow a pen?")
+  const borrowMatch = lower.match(/(?:can i borrow|could i borrow|lend me)\s+(?:a\s+|an\s+|some\s+)?(.+)/i);
+  if (borrowMatch) {
+    const rawObj = borrowMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+    const objEntry = LEXICON_ENTRIES[rawObj.toLowerCase()] || LEXICON_ENTRIES[rawObj.toLowerCase().replace(/s$/, '')];
+    const objJa = objEntry?.kanji.replace(/[!。？?]/g, '') || englishToKatakana(rawObj);
+    const objKana = objEntry?.kana.replace(/[!。？?]/g, '') || objJa;
+    const objRomaji = objEntry?.romaji.replace(/[!。？?]/g, '') || rawObj;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `${objJa}をお借りできますか？`,
+      kana: `${objKana}をおかりできますか？`,
+      romaji: `${objRomaji} o o-kari dekimasu ka?`,
+      english: `Could I please borrow ${rawObj}?`,
+      rubySegments: [
+        { text: objJa, isKanji: /[\u4e00-\u9faf]/.test(objJa) },
+        { text: 'をお', isKanji: false },
+        { text: '借', reading: 'か', isKanji: true },
+        { text: 'りできますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: objJa, reading: objKana, romaji: objRomaji.toLowerCase(), pos: 'noun', meaning: rawObj, jlpt: 'N5' },
+        { surface: 'をお借りできますか', reading: 'をおかりできますか', romaji: 'o okari dekimasu ka', pos: 'phrase', meaning: 'could I borrow (polite humble)', jlpt: 'N4' },
+      ],
+      grammarNote: 'お借りする (o-kari suru) is the respectful polite form of 借りる (kariru, to borrow). Adding できますか makes it very polite.',
+      replyJapanese: '「どうぞ、使ってください！」と快く貸してくれますよ。使い終わったら「ありがとうございました」とお礼を伝えましょう！',
+      replyKana: '「どうぞ、つかってください！」とこころよくかしてくれますよ。つかいおわったら「ありがとうございました」とおれいをつたえましょう！',
+      replyRomaji: '"Dōzo, tsukatte kudasai!" to kokoroyoku kashite kuremasu yo. Tsukai-owattara "Arigatō gozaimashita" to orei o tsutaemashō!',
+      replyEnglish: 'They will gladly reply: "Please go ahead and use it!" When done, remember to say "Arigatō gozaimashita"!',
+      suggestedReplies: ['Thank you so much', 'I will return it right away', 'Very helpful!'],
+    };
+  }
+
+  // 19. Pattern Matching: Social, Greetings & Together
+  if (/(?:good morning teacher|good morning sensei)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '先生、おはようございます！',
+      kana: 'せんせい、おはようございます！',
+      romaji: 'Sensei, ohayō gozaimasu!',
+      english: 'Good morning, Sensei!',
+      rubySegments: [
+        { text: '先生', reading: 'せんせい', isKanji: true },
+        { text: '、おはようございます！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '先生', reading: 'せんせい', romaji: 'sensei', pos: 'noun', meaning: 'teacher / instructor', jlpt: 'N5' },
+        { surface: 'おはようございます', reading: 'おはようございます', romaji: 'ohayou gozaimasu', pos: 'greeting', meaning: 'good morning (polite)', jlpt: 'N5' },
+      ],
+      grammarNote: 'In Japan, students address their instructors by title: 先生 (Sensei). Adding it before the greeting sounds very polite and affectionate!',
+      replyJapanese: 'おはようございます！今日も元気いっぱいに楽しく日本語を練習しましょうね！',
+      replyKana: 'おはようございます！きょうもげんきいっぱいにつたのしくにほんごをれんしゅうしましょうね！',
+      replyRomaji: 'Ohayō gozaimasu! Kyō mo genki ippai ni tanoshiku nihongo o renshū shimashō ne!',
+      replyEnglish: 'Good morning! Let\'s have a fun, energetic Japanese conversation today as well!',
+      suggestedReplies: ['Let\'s start the lesson!', 'I am ready to learn', 'Teach me useful phrases today'],
+    };
+  }
+
+  if (/(?:how was your day|how is your day)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '今日はどんな一日でしたか？',
+      kana: 'きょうはどんないちにちでしたか？',
+      romaji: 'Kyō wa donna ichinichi deshita ka?',
+      english: 'How was your day today?',
+      rubySegments: [
+        { text: '今日', reading: 'きょう', isKanji: true },
+        { text: 'はどんな', isKanji: false },
+        { text: '一日', reading: 'いちにち', isKanji: true },
+        { text: 'でしたか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '今日', reading: 'きょう', romaji: 'kyou', pos: 'noun', meaning: 'today', jlpt: 'N5' },
+        { surface: 'どんな', reading: 'どんな', romaji: 'donna', pos: 'interrogative', meaning: 'what kind of', jlpt: 'N5' },
+        { surface: '一日', reading: 'いちにち', romaji: 'ichinichi', pos: 'noun', meaning: 'day / whole day', jlpt: 'N5' },
+        { surface: 'でしたか', reading: 'でしたか', romaji: 'deshita ka', pos: 'copula', meaning: 'was it? (past polite)', jlpt: 'N5' },
+      ],
+      grammarNote: 'どんな一日でしたか？ is a wonderful question to ask friends, colleagues, or your teacher at the end of the day.',
+      replyJapanese: '今日もあなたと一緒に日本語のレッスンができて、とても充実した楽しい一日ですよ！あなたの一日はいかがでしたか？',
+      replyKana: 'きょうもあなたといっしょににほんごのれっすんができて、とてもじゅうじつしたたのしいいちにちですよ！あなたはいかがでしたか？',
+      replyRomaji: 'Kyō mo anata to issho ni nihongo no ressun ga dekite, totemo jūjitsu shita tanoshii ichinichi desu yo! Anata wa ikaga deshita ka?',
+      replyEnglish: 'Practicing Japanese with you made it such a joyful and rewarding day! How did your own day go?',
+      suggestedReplies: ['It was very productive', 'A little tiring, but good', 'I had a relaxing day'],
+    };
+  }
+
+  if (/(?:let's study together|study together)/i.test(lower)) {
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: '一緒に勉強しましょう！',
+      kana: 'いっしょにべんきょうしましょう！',
+      romaji: 'Issho ni benkyō shimashō!',
+      english: 'Let\'s study together!',
+      rubySegments: [
+        { text: '一緒', reading: 'いっしょ', isKanji: true },
+        { text: 'に', isKanji: false },
+        { text: '勉強', reading: 'べんきょう', isKanji: true },
+        { text: 'しましょう！', isKanji: false },
+      ],
+      breakdown: [
+        { surface: '一緒に', reading: 'いっしょに', romaji: 'issho ni', pos: 'adverb', meaning: 'together', jlpt: 'N5' },
+        { surface: '勉強しましょう', reading: 'べんきょうしましょう', romaji: 'benkyou shimashou', pos: 'verb', meaning: "let's study (invitational)", jlpt: 'N5' },
+      ],
+      grammarNote: '〜ましょう (mashō) turns any polite verb into a friendly invitation: "Let\'s do [verb]!".',
+      replyJapanese: 'はい、大賛成です！一緒に楽しく勉強すれば、会話もどんどん上達しますよ！',
+      replyKana: 'はい、だいさんせいです！いっしょにたのしくべんきょうすれば、かいわもどんどんじょうたつしますよ！',
+      replyRomaji: 'Hai, daisansei desu! Issho ni tanoshiku benkyō sureba, kaiwa mo dondon jōtatsu shimasu yo!',
+      replyEnglish: 'Yes, absolutely! Studying together makes speaking skills improve rapidly and pleasantly!',
+      suggestedReplies: ['Teach me more travel phrases', 'Let\'s practice ordering food', 'Can we practice kanji?'],
+    };
+  }
+
+  // 20. Pattern Matching: Past Actions ("I went to [place]", "I ate [food]", "I saw / watched [thing]")
+  const wentMatch = lower.match(/(?:i went to|we went to)\s+(?:the\s+)?(.+)/i);
+  if (wentMatch) {
+    const rawDest = wentMatch[1].replace(/[?!.]/g, '').trim();
+    const destEntry = LEXICON_ENTRIES[rawDest.toLowerCase()];
+    const destJa = destEntry?.kanji.replace(/[!。？?]/g, '') || englishToKatakana(rawDest);
+    const destKana = destEntry?.kana.replace(/[!。？?]/g, '') || destJa;
+    const destRomaji = destEntry?.romaji.replace(/[!。？?]/g, '') || rawDest;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `${destJa}へ行きました。`,
+      kana: `${destKana}へいきました。`,
+      romaji: `${destRomaji} e ikimashita.`,
+      english: `I went to ${rawDest}.`,
+      rubySegments: [
+        { text: destJa, isKanji: /[\u4e00-\u9faf]/.test(destJa) },
+        { text: 'へ', isKanji: false },
+        { text: '行', reading: 'い', isKanji: true },
+        { text: 'きました。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: destJa, reading: destKana, romaji: destRomaji.toLowerCase(), pos: 'proper noun', meaning: rawDest, jlpt: 'N5' },
+        { surface: 'へ', reading: 'え', romaji: 'e', pos: 'particle', meaning: 'direction marker', jlpt: 'N5' },
+        { surface: '行きました', reading: 'いきました', romaji: 'ikimashita', pos: 'verb', meaning: 'went (past polite)', jlpt: 'N5' },
+      ],
+      grammarNote: '行く (iku, to go) becomes 行きました (ikimashita, went) in the polite past tense.',
+      replyJapanese: `${destJa}に行かれたんですね！とても素敵な場所だと伺っています。何が一番楽しかったですか？`,
+      replyKana: `${destKana}にいかれたんですね！とてもすてきなばしょだとうかがっています。なにがいちばんたのしかったですか？`,
+      replyRomaji: `${destRomaji} ni ikaretan desu ne! Totemo suteki na basho da to ukagatte imasu. Nani ga ichiban tanoshikatta desu ka?`,
+      replyEnglish: `You went to ${rawDest}! I hear it is such a wonderful place. What did you enjoy most there?`,
+      suggestedReplies: ['The delicious local food', 'The beautiful scenery', 'I want to visit again'],
+    };
+  }
+
+  const ateMatch = lower.match(/(?:i ate|we ate|i had)\s+(?:some\s+|a\s+|an\s+)?(.+)/i);
+  if (ateMatch) {
+    const rawFood = ateMatch[1].replace(/[?!.]/g, '').trim();
+    const foodEntry = LEXICON_ENTRIES[rawFood.toLowerCase()];
+    const foodJa = foodEntry?.kanji.replace(/[!。？?]/g, '') || englishToKatakana(rawFood);
+    const foodKana = foodEntry?.kana.replace(/[!。？?]/g, '') || foodJa;
+    const foodRomaji = foodEntry?.romaji.replace(/[!。？?]/g, '') || rawFood;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `${foodJa}を食べました。`,
+      kana: `${foodKana}をたべました。`,
+      romaji: `${foodRomaji} o tabemashita.`,
+      english: `I ate ${rawFood}.`,
+      rubySegments: [
+        { text: foodJa, isKanji: /[\u4e00-\u9faf]/.test(foodJa) },
+        { text: 'を', isKanji: false },
+        { text: '食', reading: 'た', isKanji: true },
+        { text: 'べました。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: foodJa, reading: foodKana, romaji: foodRomaji.toLowerCase(), pos: 'noun', meaning: rawFood, jlpt: 'N5' },
+        { surface: 'を', reading: 'を', romaji: 'o', pos: 'particle', meaning: 'object marker', jlpt: 'N5' },
+        { surface: '食べました', reading: 'たべました', romaji: 'tabemashita', pos: 'verb', meaning: 'ate (past polite)', jlpt: 'N5' },
+      ],
+      grammarNote: '食べる (taberu, to eat) becomes 食べました (tabemashita, ate). を marks the food consumed.',
+      replyJapanese: `${foodJa}、とても美味しそうですね！お腹いっぱい満足できましたか？`,
+      replyKana: `${foodKana}、とてもおいしそうですね！おなかいっぱいまんぞくできましたか？`,
+      replyRomaji: `${foodRomaji}, totemo oishisō desu ne! Onaka ippai manzoku dekimashita ka?`,
+      replyEnglish: `${rawFood} sounds so delicious! Were you full and satisfied?`,
+      suggestedReplies: ['Yes, very delicious!', 'I was completely full', 'I want to eat it again'],
+    };
+  }
+
+  // 21. Pattern Matching: Existence & Availability ("Do you have [item]?", "Is there [item]?")
+  const haveMatch = lower.match(/(?:do you have|is there|are there)\s+(?:a\s+|an\s+|any\s+|some\s+)?(.+)/i);
+  if (haveMatch) {
+    const rawItem = haveMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+    const itemEntry = LEXICON_ENTRIES[rawItem.toLowerCase()] || LEXICON_ENTRIES[rawItem.toLowerCase().replace(/s$/, '')];
+    const itemJa = itemEntry?.kanji.replace(/[!。？?]/g, '') || englishToKatakana(rawItem);
+    const itemKana = itemEntry?.kana.replace(/[!。？?]/g, '') || itemJa;
+    const itemRomaji = itemEntry?.romaji.replace(/[!。？?]/g, '') || rawItem;
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `${itemJa}はありますか？`,
+      kana: `${itemKana}はありますか？`,
+      romaji: `${itemRomaji} wa arimasu ka?`,
+      english: `Do you have ${rawItem}?`,
+      rubySegments: [
+        { text: itemJa, isKanji: /[\u4e00-\u9faf]/.test(itemJa) },
+        { text: 'はありますか？', isKanji: false },
+      ],
+      breakdown: [
+        { surface: itemJa, reading: itemKana, romaji: itemRomaji.toLowerCase(), pos: 'noun', meaning: rawItem, jlpt: 'N5' },
+        { surface: 'はありますか', reading: 'はありますか', romaji: 'wa arimasu ka', pos: 'phrase', meaning: 'do you have? / is there?', jlpt: 'N5' },
+      ],
+      grammarNote: 'ある (aru) expresses existence for inanimate objects. Combine with は to ask "Do you have [item]?": 〜はありますか？',
+      replyJapanese: `「はい、ございますよ！どうぞご覧ください」と店員さんが親切に案内してくれますよ。`,
+      replyKana: `「はい、ございますよ！どうぞごらんください」とてんいんさんがしんせつにあんないしてくれますよ。`,
+      replyRomaji: '"Hai, gozaimasu yo! Dōzo goran kudasai" to ten\'in-san ga shinsetsu ni annai shite kuremasu yo.',
+      replyEnglish: 'Staff will politely reply: "Yes, we have it! Please feel free to take a look."',
+      suggestedReplies: ['How much is this?', 'Can I take one?', 'Thank you very much'],
+    };
+  }
+
+  // 21b. Pattern Matching: Inquiries & Explanations ("Tell me about [topic]", "Can you tell me about [topic]", "Please explain [topic]")
+  const tellMatch = lower.match(/(?:tell me about|can you tell me about|could you tell me about|please tell me about|please explain|what is|tell me more about)\s+(.+)/i);
+  if (tellMatch) {
+    const rawTopic = tellMatch[1].replace(/,?\s*please\b/gi, '').replace(/[?!.]/g, '').trim();
+    const topicLower = rawTopic.toLowerCase();
+    let topicJa = '';
+    let topicKana = '';
+    let topicRomaji = '';
+    const topicEntry = LEXICON_ENTRIES[topicLower] || LEXICON_ENTRIES[topicLower.replace(/s$/, '')];
+
+    if (topicLower.includes('japanese culture') || topicLower === 'japan culture') {
+      topicJa = '日本の文化'; topicKana = 'にほんのぶんか'; topicRomaji = 'Nihon no bunka';
+    } else if (topicLower === 'culture') {
+      topicJa = '文化'; topicKana = 'ぶんか'; topicRomaji = 'Bunka';
+    } else if (topicLower.includes('anime')) {
+      topicJa = 'アニメ'; topicKana = 'あにめ'; topicRomaji = 'Anime';
+    } else if (topicLower.includes('history')) {
+      topicJa = '歴史'; topicKana = 'れきし'; topicRomaji = 'Rekishi';
+    } else if (topicLower.includes('tea ceremony') || topicLower === 'sado') {
+      topicJa = '茶道'; topicKana = 'さどう'; topicRomaji = 'Sadō';
+    } else if (topicLower.includes('bullet train') || topicLower.includes('shinkansen')) {
+      topicJa = '新幹線'; topicKana = 'しんかんせん'; topicRomaji = 'Shinkansen';
+    } else if (topicLower.includes('japanese food') || topicLower.includes('traditional food')) {
+      topicJa = '和食（日本食）'; topicKana = 'わしょく（にほんしょく）'; topicRomaji = 'Washoku (nihon-shoku)';
+    } else if (topicEntry) {
+      topicJa = topicEntry.kanji.replace(/[!。？?]/g, '');
+      topicKana = topicEntry.kana.replace(/[!。？?]/g, '');
+      topicRomaji = topicEntry.romaji.replace(/[!。？?]/g, '');
+    } else {
+      topicJa = englishToKatakana(rawTopic);
+      topicKana = topicJa;
+      topicRomaji = rawTopic;
+    }
+
+    return {
+      role: 'sensei',
+      englishInput: trimmed,
+      japanese: `${topicJa}について教えてください。`,
+      kana: `${topicKana}についておしえてください。`,
+      romaji: `${topicRomaji} ni tsuite oshiete kudasai.`,
+      english: `Please tell me about ${rawTopic}.`,
+      rubySegments: [
+        ...(topicEntry?.ruby || [{ text: topicJa, isKanji: /[\u4e00-\u9faf]/.test(topicJa) }]),
+        { text: 'について', isKanji: false },
+        { text: '教', reading: 'おし', isKanji: true },
+        { text: 'えてください。', isKanji: false },
+      ],
+      breakdown: [
+        { surface: topicJa, reading: topicKana, romaji: topicRomaji.toLowerCase(), pos: 'noun', meaning: rawTopic, jlpt: 'N5' },
+        { surface: 'について', reading: 'について', romaji: 'ni tsuite', pos: 'particle', meaning: 'about / regarding', jlpt: 'N4' },
+        { surface: '教えてください', reading: 'おしえてください', romaji: 'oshiete kudasai', pos: 'verb', meaning: 'please teach / tell me', jlpt: 'N5' },
+      ],
+      grammarNote: '〜について (ni tsuite) means "about" or "regarding". 教えてください (oshiete kudasai) politely asks "please teach / tell me". Together, it creates the essential phrase: [Topic]について教えてください。',
+      replyJapanese: `「${topicJa}」についてですね！とても興味深い素晴らしいテーマです。日本のどんな特徴や魅力を知りたいですか？`,
+      replyKana: `「${topicKana}」についてですね！とてもきょうみぶかいすばらしいてーまです。にほんのどんなとくちょうやりょくをしりたいですか？`,
+      replyRomaji: `"${topicRomaji}" ni tsuite desu ne! Totemo kyōmibukai subarashii tēma desu. Nihon no donna tokuchō ya miryoku o shiritai desu ka?`,
+      replyEnglish: `About ${rawTopic}! What a fascinating and wonderful topic. What aspects of it would you like to explore first?`,
+      suggestedReplies: [
+        `Tell me about Japanese history`,
+        `How do you say culture in Japanese?`,
+        `Let's practice another sentence!`,
+      ],
+    };
+  }
+
+  // 22. Universal Semantic Sentence Synthesizer for Any General Expression
   const STOP_WORDS = new Set([
     'the', 'a', 'an', 'this', 'that', 'these', 'those', 'it', 'is', 'are', 'was', 'were',
     'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'about', 'as', 'into',
     'very', 'my', 'your', 'his', 'her', 'their', 'our', 'and', 'or', 'so', 'but',
     'me', 'you', 'him', 'them', 'us', 'can', 'could', 'will', 'would', 'shall', 'should',
     'please', 'just', 'really', 'do', 'does', 'did', 'have', 'has', 'had', 'be', 'been',
-    'i', 'im', "i'm", 'am'
+    'i', 'im', "i'm", 'am',
+    'tell', 'tells', 'told', 'say', 'says', 'said', 'talk', 'talks', 'talking',
+    'know', 'want', 'wants', 'like', 'likes'
   ]);
 
-  // Extract substantive content words (ignoring grammatical stop words)
   const substantiveWords = words.filter(w => {
-    const cleanW = w.toLowerCase().replace(/[?!.,'"]/g, '');
+    const cleanW = w.toLowerCase().replace(/[?!.,'"]/g, '').trim();
     return cleanW.length > 0 && !STOP_WORDS.has(cleanW);
   });
 
-  const extractedWords: { en: string; ja: string; kana: string; romaji: string }[] = [];
-  for (const w of (substantiveWords.length > 0 ? substantiveWords : words)) {
-    const cleanW = w.toLowerCase().replace(/[?!.,'"]/g, '');
-    const entry = LEXICON_ENTRIES[cleanW] || LEXICON_ENTRIES[cleanW.replace(/s$/, '')];
-    if (entry) {
-      extractedWords.push({
-        en: cleanW,
-        ja: entry.kanji.replace(/[!。？?]/g, ''),
-        kana: entry.kana.replace(/[!。？?]/g, ''),
-        romaji: entry.romaji.replace(/[!。？?]/g, ''),
-      });
-    }
-  }
+  const rawTopic = substantiveWords[0] || words[0] || 'conversation';
+  const cleanTopic = rawTopic.toLowerCase().replace(/[?!.,'"]/g, '').trim() || 'this topic';
+  const entry = LEXICON_ENTRIES[cleanTopic] || LEXICON_ENTRIES[cleanTopic.replace(/s$/, '')];
+  const topicJa = entry ? entry.kanji.replace(/[!。？?]/g, '') : englishToKatakana(cleanTopic);
+  const topicKana = entry ? entry.kana.replace(/[!。？?]/g, '') : topicJa;
+  const topicRomaji = entry ? entry.romaji.replace(/[!。？?]/g, '') : cleanTopic;
 
   const isQuestion = /\?$/.test(trimmed) || /^(what|where|who|when|why|how|can|is|are|do|does|could|would|should)/i.test(trimmed);
-  const fallbackRaw = substantiveWords[0] || words[0] || 'practice';
-  const fallbackClean = fallbackRaw.toLowerCase().replace(/[?!.,'"]/g, '');
-  const primaryTopic = extractedWords[0] || {
-    en: fallbackClean,
-    ja: englishToKatakana(fallbackClean),
-    kana: englishToKatakana(fallbackClean),
-    romaji: fallbackClean,
-  };
 
-  // Construct an authentic Japanese sentence representing what the learner wants to say
-  const synthesizedJa = isQuestion
-    ? `「${primaryTopic.ja}」について尋ねる表現ですね！`
-    : `「${primaryTopic.ja}」を使った自然な日本語表現ですね！`;
-  const synthesizedKana = isQuestion
-    ? `「${primaryTopic.kana}」についてたずねるひょうげんですね！`
-    : `「${primaryTopic.kana}」をつかったしぜんなにほんごひょうげんですね！`;
-  const synthesizedRomaji = isQuestion
-    ? `"${primaryTopic.romaji}" ni tsuite tazuneru hyōgen desu ne!`
-    : `"${primaryTopic.romaji}" o tsukatta shizen na nihongo hyōgen desu ne!`;
-  const synthesizedEnglish = isQuestion
-    ? `Here is how to ask about "${primaryTopic.en}" in natural Japanese!`
-    : `Here is a natural Japanese expression about "${primaryTopic.en}"!`;
+  // Construct natural, meaningful Japanese representation tailored to question vs statement
+  const translatedJa = isQuestion
+    ? `「${topicJa}」について教えていただけますか？`
+    : `「${topicJa}」について話しましょう！`;
+  const translatedKana = isQuestion
+    ? `「${topicKana}」についておしえていただけますか？`
+    : `「${topicKana}」についてはなしましょう！`;
+  const translatedRomaji = isQuestion
+    ? `"${topicRomaji}" ni tsuite oshiete itadakemasu ka?`
+    : `"${topicRomaji}" ni tsuite hanashimashō!`;
+  const translatedEnglish = isQuestion
+    ? `Could you tell me about "${cleanTopic}"?`
+    : `Let's talk about "${cleanTopic}"!`;
 
-  // Dynamically tailor the Sensei follow-up reply based on the detected vocabulary domain
-  let replyJa = `「${primaryTopic.ja}」を使った表現、とても自然で素晴らしいですね！この言葉を使って他にも何か言ってみたいですか？`;
-  let replyKana = `「${primaryTopic.kana}」をつかったひょうげん、とてもしぜんですばらしいですね！このことばをつかってほかにもなにかいってみたいですか？`;
-  let replyRomaji = `"${primaryTopic.romaji}" o tsukatta hyōgen, totemo shizen de subarashii desu ne! Kono kotoba o tsukatte hoka ni mo nanika itte mitai desu ka?`;
-  let replyEnglish = `Expressing "${primaryTopic.en}" in Japanese is so useful and natural! Would you like to practice another sentence with this word?`;
+  // Meaningful teacher conversational response
+  let senseiReplyJa = `「${topicJa}」についてですね！とても良い表現です。具体的にどんなことを聞いてみたいですか？`;
+  let senseiReplyKana = `「${topicKana}」についてですね！とてもよいひょうげんです。ぐたいてきにどんなことをきいてみたいですか？`;
+  let senseiReplyRomaji = `"${topicRomaji}" ni tsuite desu ne! Totemo yoi hyōgen desu. Gutaiteki ni donna koto o kiite mitai desu ka?`;
+  let senseiReplyEn = `About "${cleanTopic}"! That is a wonderful phrase. What would you like to explore next?`;
 
-  // Domain-specific customization
-  if (/weather|rain|snow|sun|cold|hot|warm/i.test(lower)) {
-    replyJa = 'お天気のお話ですね！今日の天気はどうですか？晴れていますか？';
-    replyKana = 'おてんきのおはなしですね！きょうのてんきはどうですか？はれていますか？';
-    replyRomaji = 'O-tenki no ohanashi desu ne! Kyō no tenki wa dō desu ka? Harete imasu ka?';
-    replyEnglish = 'Talking about the weather! How is the weather where you are today? Is it sunny?';
-  } else if (/food|eat|restaurant|delicious|sushi|ramen|coffee|water|drink/i.test(lower)) {
-    replyJa = '美味しそうな食べ物のお話ですね！日本食で一番お気に入りの料理は何ですか？';
-    replyKana = 'おいしそうなたべもののおはなしですね！にほんしょくでいちばんおきにいりのりょうりはなんですか？';
-    replyRomaji = 'Oishisō na tabemono no ohanashi desu ne! Nihon-shoku de ichiban o-kiniiri no ryōri wa nan desu ka?';
-    replyEnglish = 'A delicious topic! What is your absolute favorite Japanese dish or beverage?';
-  } else if (/japan|travel|hotel|station|train|ticket|airport|tokyo|kyoto/i.test(lower)) {
-    replyJa = '日本の旅行や観光のお話ですね！いつか日本へ旅行する計画はありますか？';
-    replyKana = 'にほんのりょこうやかんこうのおはなしですね！いつかにほんへりょこうするけいかくはありますか？';
-    replyRomaji = 'Nihon no ryokō ya kankō no ohanashi desu ne! Itsuka Nihon e ryokō suru keikaku wa arimasu ka?';
-    replyEnglish = 'A great travel topic! Do you have plans to visit Japan anytime soon?';
-  } else if (/friend|family|person|people|teacher|student|doctor/i.test(lower)) {
-    replyJa = '人や人間関係の温かい表現ですね！身近な人についてもっと日本語で話してみますか？';
-    replyKana = 'ひとやにんげんかんけいのあたたかいひょうげんですね！みぢかなひとについてもっとにほんごではなしてみますか？';
-    replyRomaji = 'Hito ya ningen kankei no atatakai hyōgen desu ne! Mijika na hito ni tsuite motto nihongo de hanashite mimasu ka?';
-    replyEnglish = 'Such a heartwarming topic! Would you like to practice describing people close to you?';
-  } else if (/study|learn|school|book|language|kanji/i.test(lower)) {
-    replyJa = '日本語の勉強、毎日頑張っていて本当に感心します！次はどんな表現に挑戦しますか？';
-    replyKana = 'にほんごのべんきょう、まいにちがんばっていてほんとうにかんしんします！つぎはどんなひょうげんにちょうせんしますか？';
-    replyRomaji = 'Nihongo no benkyō, mainichi gambatte ite hontō ni kanshin shimasu! Tsugi wa donna hyōgen ni chōsen shimasu ka?';
-    replyEnglish = 'I am truly impressed by your dedication to studying Japanese! What kind of expression would you like to tackle next?';
+  if (/travel|trip|japan|visit|go|fly|tokyo|kyoto|osaka/i.test(lower)) {
+    senseiReplyJa = '日本の観光や旅行のお話ですね！いつか訪れてみたい街や観光地はありますか？';
+    senseiReplyKana = 'にほんのかんこうやりょこうのおはなしですね！いつかおとずれてみたいまちやかんこうちはありますか？';
+    senseiReplyRomaji = 'Nihon no kankō ya ryokō no ohanashi desu ne! Itsuka otozurete mitai machi ya kankōchi wa arimasu ka?';
+    senseiReplyEn = 'A lovely travel topic! Which cities or sights in Japan would you love to visit most?';
+  } else if (/food|eat|dinner|lunch|breakfast|snack|cook|drink/i.test(lower)) {
+    senseiReplyJa = '美味しそうな食べ物のお話ですね！日本食で一番食べてみたい料理は何ですか？';
+    senseiReplyKana = 'おいしそうなたべもののおはなしですね！にほんしょくでいちばんたべてみたいりょうりはなんですか？';
+    senseiReplyRomaji = 'Oishisō na tabemono no ohanashi desu ne! Nihon-shoku de ichiban tabete mitai ryōri wa nan desu ka?';
+    senseiReplyEn = 'A delicious food topic! What Japanese dish are you most excited to taste?';
   }
 
   return {
     role: 'sensei',
     englishInput: trimmed,
-    japanese: synthesizedJa,
-    kana: synthesizedKana,
-    romaji: synthesizedRomaji,
-    english: synthesizedEnglish,
+    japanese: translatedJa,
+    kana: translatedKana,
+    romaji: translatedRomaji,
+    english: translatedEnglish,
     rubySegments: [
-      { text: `「${primaryTopic.ja}」について`, isKanji: /[\u4e00-\u9faf]/.test(primaryTopic.ja) },
-      { text: isQuestion ? '尋' : '自然', reading: isQuestion ? 'たず' : 'しぜん', isKanji: true },
-      { text: isQuestion ? 'ねる表現ですね！' : 'な日本語表現ですね！', isKanji: false },
+      { text: `「${topicJa}」について`, isKanji: /[\u4e00-\u9faf]/.test(topicJa) },
+      { text: isQuestion ? '教' : '話', reading: isQuestion ? 'おし' : 'はな', isKanji: true },
+      { text: isQuestion ? 'えていただけますか？' : 'しましょう！', isKanji: false },
     ],
     breakdown: [
-      { surface: primaryTopic.ja, reading: primaryTopic.kana, romaji: primaryTopic.romaji.toLowerCase(), pos: 'key term', meaning: primaryTopic.en, jlpt: 'N5' },
+      { surface: topicJa, reading: topicKana, romaji: topicRomaji.toLowerCase(), pos: 'topic', meaning: cleanTopic, jlpt: 'N5' },
       { surface: 'について', reading: 'について', romaji: 'ni tsuite', pos: 'particle', meaning: 'about / regarding', jlpt: 'N4' },
+      { surface: isQuestion ? '教えていただけますか' : '話しましょう', reading: isQuestion ? 'おしえていただけますか' : 'はなしましょう', romaji: isQuestion ? 'oshiete itadakemasu ka' : 'hanashimashou', pos: 'verb', meaning: isQuestion ? 'could you please teach me' : "let's talk", jlpt: 'N5' },
     ],
-    grammarNote: '〜について (ni tsuite) is an essential pattern meaning "regarding / concerning [topic]". Use it whenever introducing a topic to discuss!',
-    replyJapanese: replyJa,
-    replyKana: replyKana,
-    replyRomaji: replyRomaji,
-    replyEnglish: replyEnglish,
+    grammarNote: isQuestion
+      ? '〜について教えていただけますか？ (ni tsuite oshiete itadakemasu ka?) is a polite and versatile way to ask anyone to explain or tell you about a subject.'
+      : '〜について話しましょう！ (ni tsuite hanashimashō!) is a friendly invitation meaning "Let\'s talk about [topic]!".',
+    replyJapanese: senseiReplyJa,
+    replyKana: senseiReplyKana,
+    replyRomaji: senseiReplyRomaji,
+    replyEnglish: senseiReplyEn,
     suggestedReplies: [
-      `Tell me more about ${primaryTopic.en}`,
+      `Tell me more about ${cleanTopic}`,
       'How do I say this in casual speech?',
-      'Let\'s practice another phrase!',
+      'Let\'s practice another sentence!',
     ],
   };
 }
